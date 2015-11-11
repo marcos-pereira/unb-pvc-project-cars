@@ -19,3 +19,5 @@ Determinar quantos veículos estão se movimentando
 Imagens de sistemas de videomonitoramento real
 Todo o processo deve ser realizado automaticamente
 Sem interferência manual/humana
+
+Se você ainda não tem experiência com Git, faça testes na pasta sandbox desse repositório. Leia o README dentro dela.
