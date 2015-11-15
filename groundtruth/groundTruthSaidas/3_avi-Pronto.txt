@@ -1,0 +1,945 @@
+Arquivo: 3.avi
+
+
+-----------------------
+Frame 1:
+
+-----------------------
+Frame 2:
+X: 144 Y: 138 Width: 23 Height: 18
+X: 184 Y: 135 Width: 23 Height: 20
+X: 175 Y: 124 Width: 11 Height: 8
+X: 198 Y: 120 Width: 18 Height: 15
+X: 225 Y: 116 Width: 17 Height: 19
+X: 258 Y: 127 Width: 15 Height: 16
+X: 241 Y: 148 Width: 15 Height: 15
+X: 246 Y: 192 Width: 28 Height: 28
+X: 158 Y: 199 Width: 27 Height: 20
+X: 171 Y: 111 Width: 11 Height: 8
+X: 146 Y: 109 Width: 11 Height: 10
+X: 150 Y: 95 Width: 13 Height: 9
+X: 171 Y: 96 Width: 15 Height: 12
+X: 193 Y: 97 Width: 10 Height: 12
+X: 209 Y: 95 Width: 11 Height: 7
+X: 232 Y: 90 Width: 7 Height: 9
+X: 239 Y: 104 Width: 7 Height: 12
+X: 195 Y: 86 Width: 5 Height: 7
+X: 156 Y: 84 Width: 9 Height: 8
+
+-----------------------
+Frame 3:
+X: 147 Y: 138 Width: 17 Height: 13
+X: 177 Y: 135 Width: 28 Height: 15
+X: 163 Y: 191 Width: 25 Height: 24
+X: 246 Y: 191 Width: 23 Height: 21
+X: 235 Y: 147 Width: 24 Height: 18
+X: 259 Y: 130 Width: 15 Height: 8
+X: 226 Y: 120 Width: 14 Height: 11
+X: 193 Y: 120 Width: 22 Height: 18
+X: 175 Y: 122 Width: 15 Height: 14
+X: 171 Y: 108 Width: 12 Height: 13
+X: 173 Y: 94 Width: 12 Height: 14
+X: 196 Y: 99 Width: 11 Height: 10
+X: 209 Y: 93 Width: 12 Height: 9
+X: 238 Y: 102 Width: 11 Height: 14
+X: 228 Y: 88 Width: 10 Height: 8
+X: 194 Y: 86 Width: 8 Height: 5
+X: 180 Y: 80 Width: 6 Height: 6
+X: 158 Y: 81 Width: 8 Height: 8
+X: 149 Y: 91 Width: 10 Height: 8
+X: 145 Y: 106 Width: 15 Height: 13
+
+-----------------------
+Frame 4:
+X: 11 Y: 107 Width: 11 Height: 10
+X: 173 Y: 132 Width: 30 Height: 11
+X: 144 Y: 137 Width: 21 Height: 12
+X: 159 Y: 188 Width: 23 Height: 19
+X: 237 Y: 189 Width: 35 Height: 15
+X: 239 Y: 146 Width: 20 Height: 13
+X: 254 Y: 125 Width: 18 Height: 14
+X: 223 Y: 118 Width: 17 Height: 12
+X: 198 Y: 118 Width: 14 Height: 14
+X: 172 Y: 117 Width: 12 Height: 12
+X: 171 Y: 109 Width: 11 Height: 6
+X: 230 Y: 98 Width: 15 Height: 15
+X: 207 Y: 94 Width: 13 Height: 10
+X: 230 Y: 89 Width: 8 Height: 6
+X: 193 Y: 95 Width: 11 Height: 9
+X: 195 Y: 85 Width: 8 Height: 7
+X: 179 Y: 79 Width: 11 Height: 10
+X: 157 Y: 87 Width: 7 Height: 7
+X: 151 Y: 94 Width: 10 Height: 10
+X: 143 Y: 107 Width: 14 Height: 11
+X: 171 Y: 96 Width: 12 Height: 8
+
+-----------------------
+Frame 5:
+X: 10 Y: 106 Width: 18 Height: 11
+X: 141 Y: 138 Width: 18 Height: 11
+X: 155 Y: 190 Width: 27 Height: 17
+X: 241 Y: 188 Width: 28 Height: 16
+X: 237 Y: 146 Width: 22 Height: 17
+X: 257 Y: 127 Width: 14 Height: 10
+X: 224 Y: 120 Width: 19 Height: 15
+X: 236 Y: 104 Width: 14 Height: 10
+X: 229 Y: 89 Width: 12 Height: 8
+X: 210 Y: 96 Width: 15 Height: 9
+X: 194 Y: 83 Width: 9 Height: 7
+X: 179 Y: 80 Width: 10 Height: 11
+X: 152 Y: 90 Width: 8 Height: 10
+X: 168 Y: 94 Width: 14 Height: 8
+X: 194 Y: 95 Width: 10 Height: 9
+X: 197 Y: 121 Width: 18 Height: 11
+X: 183 Y: 132 Width: 20 Height: 16
+X: 173 Y: 121 Width: 12 Height: 8
+X: 169 Y: 104 Width: 11 Height: 12
+X: 143 Y: 100 Width: 18 Height: 15
+
+-----------------------
+Frame 6:
+X: 183 Y: 133 Width: 18 Height: 15
+X: 199 Y: 121 Width: 12 Height: 15
+X: 222 Y: 116 Width: 14 Height: 10
+X: 239 Y: 146 Width: 18 Height: 12
+X: 259 Y: 126 Width: 13 Height: 9
+X: 237 Y: 185 Width: 26 Height: 16
+X: 156 Y: 185 Width: 23 Height: 19
+X: 149 Y: 136 Width: 18 Height: 13
+X: 171 Y: 122 Width: 16 Height: 7
+X: 171 Y: 108 Width: 13 Height: 7
+X: 174 Y: 95 Width: 10 Height: 11
+X: 191 Y: 96 Width: 15 Height: 12
+X: 210 Y: 94 Width: 15 Height: 11
+X: 231 Y: 100 Width: 16 Height: 11
+X: 146 Y: 104 Width: 14 Height: 11
+X: 11 Y: 110 Width: 13 Height: 7
+
+-----------------------
+Frame 7:
+X: 299 Y: 195 Width: 18 Height: 17
+X: 237 Y: 179 Width: 24 Height: 18
+X: 154 Y: 180 Width: 24 Height: 21
+X: 185 Y: 133 Width: 17 Height: 15
+X: 237 Y: 142 Width: 18 Height: 13
+X: 254 Y: 118 Width: 12 Height: 16
+X: 217 Y: 113 Width: 20 Height: 17
+X: 232 Y: 103 Width: 15 Height: 9
+X: 209 Y: 93 Width: 12 Height: 7
+X: 189 Y: 91 Width: 13 Height: 10
+X: 174 Y: 92 Width: 12 Height: 7
+X: 148 Y: 90 Width: 10 Height: 8
+X: 145 Y: 102 Width: 11 Height: 14
+X: 146 Y: 126 Width: 16 Height: 16
+X: 169 Y: 104 Width: 15 Height: 10
+X: 174 Y: 118 Width: 12 Height: 9
+X: 195 Y: 117 Width: 14 Height: 12
+X: 232 Y: 86 Width: 9 Height: 11
+X: 7 Y: 106 Width: 18 Height: 14
+
+-----------------------
+Frame 8:
+X: 232 Y: 174 Width: 26 Height: 20
+X: 153 Y: 174 Width: 25 Height: 20
+X: 144 Y: 129 Width: 18 Height: 16
+X: 181 Y: 128 Width: 24 Height: 16
+X: 173 Y: 117 Width: 11 Height: 8
+X: 197 Y: 115 Width: 15 Height: 14
+X: 222 Y: 111 Width: 14 Height: 16
+X: 252 Y: 115 Width: 17 Height: 17
+X: 232 Y: 143 Width: 20 Height: 10
+X: 295 Y: 192 Width: 29 Height: 21
+X: 230 Y: 98 Width: 15 Height: 11
+X: 229 Y: 86 Width: 12 Height: 8
+X: 192 Y: 80 Width: 11 Height: 10
+X: 210 Y: 91 Width: 12 Height: 12
+X: 191 Y: 94 Width: 10 Height: 8
+X: 173 Y: 91 Width: 12 Height: 12
+X: 173 Y: 103 Width: 10 Height: 10
+X: 146 Y: 101 Width: 13 Height: 14
+X: 152 Y: 86 Width: 9 Height: 8
+X: 2 Y: 111 Width: 21 Height: 11
+
+-----------------------
+Frame 9:
+X: 0 Y: 113 Width: 12 Height: 13
+X: 144 Y: 128 Width: 17 Height: 14
+X: 148 Y: 172 Width: 31 Height: 17
+X: 172 Y: 126 Width: 37 Height: 17
+X: 196 Y: 112 Width: 13 Height: 14
+X: 221 Y: 111 Width: 16 Height: 20
+X: 229 Y: 141 Width: 23 Height: 10
+X: 231 Y: 169 Width: 26 Height: 22
+X: 249 Y: 117 Width: 16 Height: 15
+X: 288 Y: 188 Width: 33 Height: 20
+X: 174 Y: 116 Width: 13 Height: 8
+X: 173 Y: 105 Width: 11 Height: 7
+X: 229 Y: 98 Width: 16 Height: 10
+X: 227 Y: 80 Width: 13 Height: 12
+X: 209 Y: 93 Width: 11 Height: 8
+X: 191 Y: 92 Width: 12 Height: 9
+X: 169 Y: 90 Width: 17 Height: 11
+X: 151 Y: 86 Width: 14 Height: 14
+X: 146 Y: 99 Width: 14 Height: 14
+
+-----------------------
+Frame 10:
+X: 3 Y: 116 Width: 7 Height: 11
+X: 142 Y: 122 Width: 17 Height: 15
+X: 153 Y: 161 Width: 23 Height: 26
+X: 177 Y: 118 Width: 23 Height: 19
+X: 166 Y: 111 Width: 15 Height: 12
+X: 192 Y: 113 Width: 18 Height: 13
+X: 221 Y: 110 Width: 18 Height: 17
+X: 251 Y: 117 Width: 15 Height: 14
+X: 233 Y: 140 Width: 18 Height: 12
+X: 229 Y: 171 Width: 22 Height: 16
+X: 289 Y: 183 Width: 27 Height: 23
+X: 235 Y: 97 Width: 7 Height: 10
+X: 230 Y: 83 Width: 10 Height: 10
+X: 191 Y: 79 Width: 12 Height: 13
+X: 206 Y: 91 Width: 13 Height: 8
+X: 187 Y: 87 Width: 18 Height: 15
+X: 171 Y: 89 Width: 11 Height: 10
+X: 172 Y: 101 Width: 9 Height: 10
+X: 147 Y: 98 Width: 10 Height: 11
+X: 154 Y: 83 Width: 12 Height: 14
+
+-----------------------
+Frame 11:
+X: 146 Y: 165 Width: 27 Height: 21
+X: 145 Y: 122 Width: 18 Height: 17
+X: 0 Y: 114 Width: 10 Height: 17
+X: 182 Y: 124 Width: 17 Height: 17
+X: 174 Y: 113 Width: 10 Height: 10
+X: 171 Y: 104 Width: 14 Height: 7
+X: 145 Y: 97 Width: 14 Height: 12
+X: 155 Y: 85 Width: 9 Height: 14
+X: 171 Y: 87 Width: 20 Height: 13
+X: 191 Y: 88 Width: 12 Height: 9
+X: 211 Y: 87 Width: 11 Height: 12
+X: 232 Y: 84 Width: 10 Height: 7
+X: 230 Y: 94 Width: 14 Height: 11
+X: 216 Y: 109 Width: 18 Height: 15
+X: 194 Y: 112 Width: 20 Height: 15
+X: 228 Y: 134 Width: 18 Height: 13
+X: 249 Y: 117 Width: 14 Height: 12
+X: 280 Y: 182 Width: 34 Height: 25
+X: 223 Y: 168 Width: 30 Height: 18
+
+-----------------------
+Frame 12:
+X: 9 Y: 103 Width: 14 Height: 7
+X: 143 Y: 126 Width: 15 Height: 13
+X: 148 Y: 165 Width: 26 Height: 17
+X: 224 Y: 168 Width: 25 Height: 16
+X: 276 Y: 178 Width: 37 Height: 24
+X: 228 Y: 136 Width: 21 Height: 14
+X: 247 Y: 117 Width: 18 Height: 11
+X: 231 Y: 97 Width: 15 Height: 13
+X: 210 Y: 87 Width: 10 Height: 10
+X: 231 Y: 84 Width: 10 Height: 8
+X: 190 Y: 88 Width: 14 Height: 12
+X: 171 Y: 87 Width: 14 Height: 13
+X: 154 Y: 87 Width: 8 Height: 9
+X: 148 Y: 96 Width: 11 Height: 14
+X: 171 Y: 101 Width: 15 Height: 11
+X: 170 Y: 113 Width: 13 Height: 7
+X: 176 Y: 123 Width: 20 Height: 14
+X: 196 Y: 112 Width: 14 Height: 14
+X: 218 Y: 108 Width: 18 Height: 13
+
+-----------------------
+Frame 13:
+X: 7 Y: 102 Width: 9 Height: 8
+X: 143 Y: 124 Width: 17 Height: 13
+X: 149 Y: 159 Width: 22 Height: 21
+X: 177 Y: 116 Width: 17 Height: 20
+X: 194 Y: 111 Width: 13 Height: 14
+X: 218 Y: 110 Width: 16 Height: 12
+X: 244 Y: 116 Width: 17 Height: 13
+X: 223 Y: 133 Width: 22 Height: 13
+X: 227 Y: 164 Width: 21 Height: 14
+X: 277 Y: 176 Width: 27 Height: 20
+X: 231 Y: 94 Width: 12 Height: 14
+X: 208 Y: 83 Width: 10 Height: 13
+X: 191 Y: 88 Width: 12 Height: 10
+X: 175 Y: 89 Width: 12 Height: 13
+X: 172 Y: 101 Width: 11 Height: 14
+X: 149 Y: 96 Width: 12 Height: 10
+X: 156 Y: 84 Width: 12 Height: 11
+
+-----------------------
+Frame 14:
+X: 4 Y: 104 Width: 15 Height: 12
+X: 143 Y: 119 Width: 16 Height: 11
+X: 175 Y: 113 Width: 24 Height: 16
+X: 192 Y: 109 Width: 18 Height: 13
+X: 217 Y: 106 Width: 16 Height: 14
+X: 247 Y: 110 Width: 11 Height: 16
+X: 221 Y: 128 Width: 19 Height: 12
+X: 222 Y: 158 Width: 25 Height: 23
+X: 277 Y: 172 Width: 25 Height: 24
+X: 150 Y: 160 Width: 19 Height: 16
+X: 148 Y: 95 Width: 12 Height: 11
+X: 154 Y: 88 Width: 12 Height: 10
+X: 173 Y: 87 Width: 14 Height: 14
+X: 194 Y: 90 Width: 9 Height: 7
+X: 209 Y: 87 Width: 14 Height: 10
+X: 230 Y: 92 Width: 11 Height: 11
+X: 168 Y: 103 Width: 16 Height: 10
+
+-----------------------
+Frame 15:
+X: 3 Y: 101 Width: 12 Height: 11
+X: 143 Y: 117 Width: 16 Height: 12
+X: 146 Y: 151 Width: 26 Height: 22
+X: 220 Y: 161 Width: 22 Height: 16
+X: 274 Y: 174 Width: 26 Height: 16
+X: 225 Y: 131 Width: 16 Height: 12
+X: 246 Y: 112 Width: 12 Height: 10
+X: 217 Y: 104 Width: 16 Height: 16
+X: 231 Y: 96 Width: 10 Height: 7
+X: 210 Y: 88 Width: 10 Height: 10
+X: 230 Y: 81 Width: 6 Height: 10
+X: 187 Y: 86 Width: 16 Height: 10
+X: 190 Y: 109 Width: 18 Height: 12
+X: 176 Y: 111 Width: 16 Height: 15
+X: 170 Y: 105 Width: 14 Height: 10
+X: 173 Y: 97 Width: 13 Height: 8
+X: 174 Y: 84 Width: 10 Height: 9
+X: 152 Y: 95 Width: 8 Height: 10
+X: 155 Y: 86 Width: 13 Height: 6
+
+-----------------------
+Frame 16:
+X: 0 Y: 104 Width: 8 Height: 16
+X: 147 Y: 115 Width: 13 Height: 16
+X: 152 Y: 149 Width: 25 Height: 24
+X: 216 Y: 151 Width: 28 Height: 23
+X: 266 Y: 164 Width: 34 Height: 24
+X: 242 Y: 110 Width: 16 Height: 12
+X: 223 Y: 126 Width: 22 Height: 16
+X: 215 Y: 104 Width: 17 Height: 13
+X: 232 Y: 96 Width: 15 Height: 9
+X: 193 Y: 107 Width: 16 Height: 13
+X: 176 Y: 116 Width: 20 Height: 14
+X: 170 Y: 103 Width: 11 Height: 10
+X: 174 Y: 97 Width: 9 Height: 10
+X: 174 Y: 88 Width: 15 Height: 11
+X: 192 Y: 88 Width: 11 Height: 9
+X: 209 Y: 87 Width: 12 Height: 8
+X: 148 Y: 97 Width: 13 Height: 9
+X: 154 Y: 85 Width: 13 Height: 10
+X: 229 Y: 81 Width: 9 Height: 10
+
+-----------------------
+Frame 17:
+X: 151 Y: 146 Width: 15 Height: 18
+X: 144 Y: 117 Width: 17 Height: 10
+X: 173 Y: 116 Width: 19 Height: 11
+X: 193 Y: 109 Width: 15 Height: 8
+X: 220 Y: 103 Width: 12 Height: 14
+X: 240 Y: 110 Width: 19 Height: 10
+X: 226 Y: 127 Width: 15 Height: 12
+X: 218 Y: 154 Width: 21 Height: 16
+X: 266 Y: 169 Width: 27 Height: 13
+X: 228 Y: 93 Width: 10 Height: 7
+X: 210 Y: 87 Width: 10 Height: 7
+X: 229 Y: 80 Width: 7 Height: 8
+X: 190 Y: 85 Width: 12 Height: 11
+X: 176 Y: 85 Width: 11 Height: 14
+X: 175 Y: 96 Width: 13 Height: 9
+X: 172 Y: 105 Width: 10 Height: 7
+X: 151 Y: 91 Width: 11 Height: 14
+X: 155 Y: 84 Width: 11 Height: 10
+
+-----------------------
+Frame 18:
+X: 145 Y: 147 Width: 23 Height: 20
+X: 172 Y: 113 Width: 19 Height: 14
+X: 189 Y: 105 Width: 18 Height: 14
+X: 221 Y: 124 Width: 17 Height: 15
+X: 213 Y: 104 Width: 17 Height: 12
+X: 240 Y: 113 Width: 15 Height: 8
+X: 269 Y: 166 Width: 23 Height: 14
+X: 230 Y: 217 Width: 29 Height: 22
+X: 209 Y: 153 Width: 26 Height: 12
+X: 143 Y: 113 Width: 18 Height: 11
+X: 151 Y: 93 Width: 13 Height: 12
+X: 171 Y: 106 Width: 10 Height: 8
+X: 175 Y: 97 Width: 7 Height: 9
+X: 175 Y: 86 Width: 13 Height: 10
+X: 154 Y: 83 Width: 11 Height: 7
+X: 192 Y: 86 Width: 12 Height: 10
+X: 209 Y: 85 Width: 10 Height: 13
+X: 229 Y: 90 Width: 12 Height: 14
+
+-----------------------
+Frame 19:
+X: 228 Y: 78 Width: 10 Height: 8
+X: 231 Y: 93 Width: 10 Height: 7
+X: 209 Y: 83 Width: 11 Height: 12
+X: 194 Y: 86 Width: 10 Height: 8
+X: 175 Y: 82 Width: 11 Height: 11
+X: 156 Y: 81 Width: 11 Height: 11
+X: 152 Y: 92 Width: 9 Height: 9
+X: 147 Y: 116 Width: 13 Height: 14
+X: 150 Y: 143 Width: 16 Height: 18
+X: 177 Y: 108 Width: 16 Height: 15
+X: 172 Y: 104 Width: 10 Height: 7
+X: 175 Y: 98 Width: 9 Height: 6
+X: 199 Y: 106 Width: 7 Height: 12
+X: 226 Y: 121 Width: 8 Height: 14
+X: 212 Y: 100 Width: 16 Height: 14
+X: 241 Y: 108 Width: 16 Height: 11
+X: 262 Y: 159 Width: 26 Height: 19
+X: 215 Y: 150 Width: 21 Height: 18
+X: 220 Y: 211 Width: 36 Height: 21
+
+-----------------------
+Frame 20:
+X: 173 Y: 109 Width: 18 Height: 15
+X: 215 Y: 148 Width: 16 Height: 16
+X: 261 Y: 154 Width: 29 Height: 21
+X: 218 Y: 212 Width: 34 Height: 23
+X: 147 Y: 142 Width: 20 Height: 23
+X: 147 Y: 108 Width: 12 Height: 17
+X: 214 Y: 101 Width: 16 Height: 17
+X: 221 Y: 122 Width: 10 Height: 11
+X: 239 Y: 107 Width: 13 Height: 11
+X: 231 Y: 91 Width: 10 Height: 8
+X: 208 Y: 81 Width: 13 Height: 12
+X: 191 Y: 86 Width: 12 Height: 10
+X: 192 Y: 101 Width: 15 Height: 16
+X: 175 Y: 85 Width: 12 Height: 12
+X: 176 Y: 97 Width: 6 Height: 11
+X: 150 Y: 89 Width: 13 Height: 10
+
+-----------------------
+Frame 21:
+X: 146 Y: 110 Width: 15 Height: 9
+X: 149 Y: 137 Width: 16 Height: 20
+X: 174 Y: 109 Width: 19 Height: 12
+X: 192 Y: 102 Width: 14 Height: 13
+X: 216 Y: 100 Width: 10 Height: 11
+X: 237 Y: 103 Width: 16 Height: 13
+X: 219 Y: 120 Width: 18 Height: 7
+X: 208 Y: 147 Width: 25 Height: 12
+X: 258 Y: 155 Width: 30 Height: 22
+X: 215 Y: 205 Width: 34 Height: 24
+X: 232 Y: 87 Width: 8 Height: 9
+X: 210 Y: 81 Width: 10 Height: 15
+X: 191 Y: 82 Width: 11 Height: 15
+X: 173 Y: 93 Width: 11 Height: 8
+X: 147 Y: 89 Width: 14 Height: 10
+
+-----------------------
+Frame 22:
+X: 151 Y: 140 Width: 14 Height: 15
+X: 216 Y: 203 Width: 28 Height: 20
+X: 256 Y: 155 Width: 25 Height: 17
+X: 208 Y: 142 Width: 23 Height: 16
+X: 219 Y: 119 Width: 15 Height: 12
+X: 243 Y: 107 Width: 10 Height: 9
+X: 213 Y: 102 Width: 13 Height: 11
+X: 229 Y: 89 Width: 14 Height: 8
+X: 208 Y: 82 Width: 12 Height: 10
+X: 192 Y: 84 Width: 13 Height: 13
+X: 193 Y: 102 Width: 10 Height: 13
+X: 175 Y: 110 Width: 14 Height: 12
+X: 172 Y: 102 Width: 9 Height: 5
+X: 174 Y: 94 Width: 14 Height: 8
+X: 175 Y: 83 Width: 10 Height: 11
+X: 152 Y: 91 Width: 10 Height: 7
+X: 145 Y: 107 Width: 13 Height: 16
+
+-----------------------
+Frame 23:
+X: 146 Y: 109 Width: 12 Height: 11
+X: 149 Y: 135 Width: 11 Height: 18
+X: 213 Y: 202 Width: 24 Height: 17
+X: 256 Y: 149 Width: 21 Height: 23
+X: 210 Y: 142 Width: 17 Height: 13
+X: 216 Y: 114 Width: 16 Height: 16
+X: 239 Y: 105 Width: 11 Height: 10
+X: 215 Y: 99 Width: 14 Height: 14
+X: 190 Y: 103 Width: 16 Height: 9
+X: 174 Y: 106 Width: 14 Height: 13
+X: 174 Y: 93 Width: 14 Height: 8
+X: 175 Y: 84 Width: 9 Height: 7
+X: 229 Y: 88 Width: 12 Height: 10
+X: 151 Y: 88 Width: 10 Height: 11
+X: 191 Y: 80 Width: 16 Height: 14
+
+-----------------------
+Frame 24:
+X: 190 Y: 105 Width: 15 Height: 8
+X: 212 Y: 96 Width: 14 Height: 14
+X: 238 Y: 103 Width: 10 Height: 11
+X: 258 Y: 154 Width: 19 Height: 13
+X: 220 Y: 113 Width: 14 Height: 18
+X: 208 Y: 138 Width: 18 Height: 17
+X: 207 Y: 194 Width: 28 Height: 18
+X: 146 Y: 132 Width: 18 Height: 18
+X: 140 Y: 104 Width: 16 Height: 14
+X: 171 Y: 104 Width: 19 Height: 14
+X: 174 Y: 89 Width: 8 Height: 8
+X: 152 Y: 90 Width: 12 Height: 9
+X: 157 Y: 80 Width: 11 Height: 12
+X: 175 Y: 80 Width: 14 Height: 11
+X: 192 Y: 82 Width: 10 Height: 10
+X: 228 Y: 83 Width: 10 Height: 10
+X: 209 Y: 82 Width: 10 Height: 10
+
+-----------------------
+Frame 25:
+X: 176 Y: 80 Width: 10 Height: 9
+X: 188 Y: 81 Width: 14 Height: 9
+X: 204 Y: 80 Width: 19 Height: 7
+X: 225 Y: 85 Width: 12 Height: 7
+X: 236 Y: 105 Width: 13 Height: 6
+X: 209 Y: 96 Width: 12 Height: 9
+X: 192 Y: 105 Width: 14 Height: 10
+X: 172 Y: 90 Width: 14 Height: 10
+X: 175 Y: 104 Width: 17 Height: 11
+X: 158 Y: 84 Width: 7 Height: 10
+X: 144 Y: 101 Width: 13 Height: 13
+X: 148 Y: 131 Width: 15 Height: 14
+X: 200 Y: 137 Width: 23 Height: 13
+X: 217 Y: 115 Width: 15 Height: 12
+X: 249 Y: 152 Width: 25 Height: 14
+X: 206 Y: 189 Width: 28 Height: 20
+
+-----------------------
+Frame 26:
+X: 201 Y: 184 Width: 29 Height: 19
+X: 247 Y: 144 Width: 24 Height: 16
+X: 202 Y: 133 Width: 20 Height: 13
+X: 150 Y: 128 Width: 13 Height: 17
+X: 142 Y: 101 Width: 16 Height: 10
+X: 174 Y: 104 Width: 14 Height: 13
+X: 191 Y: 99 Width: 14 Height: 13
+X: 217 Y: 112 Width: 18 Height: 13
+X: 208 Y: 96 Width: 15 Height: 14
+X: 235 Y: 102 Width: 14 Height: 5
+X: 175 Y: 91 Width: 7 Height: 9
+X: 152 Y: 87 Width: 10 Height: 8
+X: 158 Y: 77 Width: 12 Height: 10
+X: 174 Y: 78 Width: 22 Height: 10
+X: 191 Y: 80 Width: 13 Height: 9
+X: 209 Y: 80 Width: 10 Height: 9
+X: 227 Y: 84 Width: 16 Height: 13
+
+-----------------------
+Frame 27:
+X: 303 Y: 169 Width: 18 Height: 18
+X: 244 Y: 144 Width: 28 Height: 19
+X: 202 Y: 133 Width: 19 Height: 12
+X: 200 Y: 181 Width: 32 Height: 19
+X: 140 Y: 126 Width: 22 Height: 11
+X: 214 Y: 115 Width: 18 Height: 10
+X: 238 Y: 98 Width: 10 Height: 8
+X: 209 Y: 96 Width: 14 Height: 11
+X: 188 Y: 101 Width: 19 Height: 10
+X: 175 Y: 102 Width: 11 Height: 14
+X: 174 Y: 84 Width: 13 Height: 12
+X: 155 Y: 83 Width: 10 Height: 10
+X: 146 Y: 98 Width: 11 Height: 16
+X: 227 Y: 87 Width: 11 Height: 10
+X: 208 Y: 79 Width: 12 Height: 12
+X: 191 Y: 82 Width: 14 Height: 10
+
+-----------------------
+Frame 28:
+X: 145 Y: 103 Width: 11 Height: 10
+X: 143 Y: 121 Width: 27 Height: 21
+X: 204 Y: 133 Width: 17 Height: 9
+X: 214 Y: 110 Width: 14 Height: 12
+X: 212 Y: 90 Width: 11 Height: 15
+X: 189 Y: 98 Width: 14 Height: 12
+X: 169 Y: 96 Width: 17 Height: 18
+X: 175 Y: 88 Width: 11 Height: 10
+X: 156 Y: 85 Width: 8 Height: 12
+X: 234 Y: 95 Width: 9 Height: 12
+X: 198 Y: 176 Width: 27 Height: 18
+X: 299 Y: 168 Width: 28 Height: 21
+X: 287 Y: 192 Width: 40 Height: 29
+
+-----------------------
+Frame 29:
+X: 145 Y: 125 Width: 16 Height: 11
+X: 205 Y: 127 Width: 14 Height: 19
+X: 241 Y: 139 Width: 28 Height: 20
+X: 198 Y: 173 Width: 29 Height: 24
+X: 292 Y: 193 Width: 29 Height: 21
+X: 304 Y: 171 Width: 24 Height: 21
+X: 211 Y: 109 Width: 15 Height: 15
+X: 234 Y: 100 Width: 14 Height: 8
+X: 209 Y: 91 Width: 13 Height: 16
+X: 191 Y: 96 Width: 15 Height: 14
+X: 178 Y: 101 Width: 12 Height: 15
+X: 174 Y: 89 Width: 14 Height: 10
+X: 193 Y: 82 Width: 8 Height: 5
+X: 211 Y: 79 Width: 8 Height: 9
+X: 227 Y: 86 Width: 16 Height: 7
+X: 144 Y: 102 Width: 13 Height: 10
+X: 155 Y: 86 Width: 10 Height: 10
+
+-----------------------
+Frame 30:
+X: 192 Y: 171 Width: 23 Height: 22
+X: 10 Y: 111 Width: 13 Height: 8
+X: 286 Y: 186 Width: 32 Height: 25
+X: 296 Y: 166 Width: 25 Height: 21
+X: 235 Y: 134 Width: 29 Height: 22
+X: 196 Y: 129 Width: 20 Height: 10
+X: 213 Y: 104 Width: 15 Height: 15
+X: 214 Y: 91 Width: 10 Height: 12
+X: 236 Y: 96 Width: 12 Height: 11
+X: 192 Y: 93 Width: 12 Height: 16
+X: 171 Y: 99 Width: 18 Height: 15
+X: 141 Y: 95 Width: 16 Height: 16
+X: 142 Y: 121 Width: 15 Height: 13
+X: 153 Y: 84 Width: 9 Height: 5
+X: 171 Y: 85 Width: 12 Height: 11
+X: 195 Y: 77 Width: 7 Height: 8
+X: 212 Y: 76 Width: 6 Height: 13
+X: 231 Y: 84 Width: 7 Height: 8
+
+-----------------------
+Frame 31:
+X: 3 Y: 111 Width: 16 Height: 14
+X: 196 Y: 165 Width: 28 Height: 25
+X: 241 Y: 139 Width: 21 Height: 16
+X: 282 Y: 188 Width: 33 Height: 20
+X: 292 Y: 162 Width: 26 Height: 21
+X: 197 Y: 125 Width: 20 Height: 15
+X: 211 Y: 109 Width: 19 Height: 9
+X: 236 Y: 98 Width: 12 Height: 7
+X: 212 Y: 88 Width: 13 Height: 15
+X: 193 Y: 91 Width: 7 Height: 15
+X: 172 Y: 98 Width: 14 Height: 15
+X: 141 Y: 119 Width: 17 Height: 18
+X: 143 Y: 96 Width: 16 Height: 9
+X: 158 Y: 81 Width: 7 Height: 14
+X: 175 Y: 87 Width: 12 Height: 8
+X: 229 Y: 85 Width: 9 Height: 6
+
+-----------------------
+Frame 32:
+X: 227 Y: 86 Width: 12 Height: 10
+X: 236 Y: 96 Width: 10 Height: 9
+X: 236 Y: 137 Width: 25 Height: 12
+X: 292 Y: 161 Width: 19 Height: 15
+X: 281 Y: 184 Width: 26 Height: 16
+X: 193 Y: 168 Width: 26 Height: 18
+X: 199 Y: 121 Width: 16 Height: 15
+X: 211 Y: 109 Width: 15 Height: 8
+X: 210 Y: 92 Width: 12 Height: 12
+X: 189 Y: 95 Width: 14 Height: 9
+X: 170 Y: 95 Width: 17 Height: 20
+X: 175 Y: 83 Width: 10 Height: 9
+X: 155 Y: 82 Width: 12 Height: 7
+X: 147 Y: 95 Width: 9 Height: 9
+X: 143 Y: 119 Width: 16 Height: 13
+X: 195 Y: 78 Width: 7 Height: 7
+X: 208 Y: 76 Width: 10 Height: 10
+X: 230 Y: 75 Width: 8 Height: 6
+
+-----------------------
+Frame 33:
+X: 177 Y: 87 Width: 10 Height: 8
+X: 170 Y: 95 Width: 15 Height: 12
+X: 190 Y: 95 Width: 15 Height: 9
+X: 211 Y: 90 Width: 14 Height: 10
+X: 234 Y: 95 Width: 12 Height: 9
+X: 215 Y: 105 Width: 8 Height: 13
+X: 201 Y: 123 Width: 13 Height: 12
+X: 237 Y: 136 Width: 25 Height: 14
+X: 288 Y: 155 Width: 25 Height: 19
+X: 281 Y: 184 Width: 26 Height: 16
+X: 189 Y: 166 Width: 30 Height: 17
+X: 143 Y: 116 Width: 17 Height: 15
+X: 144 Y: 97 Width: 16 Height: 9
+X: 158 Y: 82 Width: 8 Height: 10
+X: 165 Y: 75 Width: 9 Height: 9
+X: 181 Y: 75 Width: 8 Height: 11
+X: 195 Y: 79 Width: 6 Height: 5
+X: 210 Y: 78 Width: 8 Height: 8
+X: 230 Y: 82 Width: 7 Height: 9
+X: 0 Y: 115 Width: 12 Height: 5
+
+-----------------------
+Frame 34:
+X: 191 Y: 166 Width: 25 Height: 17
+X: 237 Y: 131 Width: 19 Height: 16
+X: 288 Y: 154 Width: 20 Height: 16
+X: 279 Y: 180 Width: 29 Height: 18
+X: 196 Y: 125 Width: 19 Height: 13
+X: 149 Y: 117 Width: 13 Height: 7
+X: 149 Y: 93 Width: 11 Height: 14
+X: 169 Y: 93 Width: 16 Height: 11
+X: 192 Y: 94 Width: 10 Height: 9
+X: 209 Y: 90 Width: 12 Height: 12
+X: 213 Y: 105 Width: 12 Height: 7
+X: 233 Y: 95 Width: 17 Height: 11
+X: 230 Y: 83 Width: 11 Height: 4
+X: 210 Y: 76 Width: 9 Height: 9
+X: 194 Y: 77 Width: 9 Height: 9
+X: 173 Y: 80 Width: 12 Height: 12
+X: 158 Y: 80 Width: 7 Height: 9
+
+-----------------------
+Frame 35:
+X: 146 Y: 116 Width: 12 Height: 10
+X: 198 Y: 120 Width: 16 Height: 12
+X: 235 Y: 137 Width: 18 Height: 10
+X: 283 Y: 153 Width: 23 Height: 16
+X: 272 Y: 176 Width: 22 Height: 16
+X: 191 Y: 165 Width: 16 Height: 6
+X: 213 Y: 103 Width: 11 Height: 11
+X: 235 Y: 95 Width: 5 Height: 7
+X: 208 Y: 90 Width: 13 Height: 11
+X: 194 Y: 91 Width: 9 Height: 11
+X: 174 Y: 83 Width: 9 Height: 14
+X: 168 Y: 98 Width: 28 Height: 10
+X: 148 Y: 92 Width: 8 Height: 13
+X: 155 Y: 81 Width: 11 Height: 12
+
+-----------------------
+Frame 36:
+X: 211 Y: 87 Width: 11 Height: 11
+X: 229 Y: 91 Width: 15 Height: 11
+X: 209 Y: 101 Width: 16 Height: 10
+X: 188 Y: 92 Width: 12 Height: 7
+X: 174 Y: 92 Width: 10 Height: 13
+X: 172 Y: 80 Width: 14 Height: 9
+X: 161 Y: 78 Width: 9 Height: 10
+X: 148 Y: 89 Width: 11 Height: 12
+X: 147 Y: 108 Width: 12 Height: 14
+X: 185 Y: 154 Width: 28 Height: 19
+X: 197 Y: 117 Width: 14 Height: 13
+X: 229 Y: 126 Width: 28 Height: 17
+X: 274 Y: 149 Width: 33 Height: 20
+X: 273 Y: 175 Width: 23 Height: 13
+
+-----------------------
+Frame 37:
+X: 267 Y: 166 Width: 27 Height: 22
+X: 278 Y: 147 Width: 22 Height: 14
+X: 231 Y: 126 Width: 19 Height: 15
+X: 193 Y: 116 Width: 19 Height: 10
+X: 184 Y: 153 Width: 26 Height: 18
+X: 145 Y: 110 Width: 13 Height: 18
+X: 171 Y: 90 Width: 18 Height: 14
+X: 190 Y: 91 Width: 18 Height: 10
+X: 210 Y: 102 Width: 15 Height: 11
+X: 210 Y: 87 Width: 11 Height: 15
+X: 232 Y: 92 Width: 12 Height: 8
+X: 152 Y: 88 Width: 9 Height: 16
+
+-----------------------
+Frame 38:
+X: 47 Y: 89 Width: 8 Height: 8
+X: 138 Y: 107 Width: 20 Height: 11
+X: 148 Y: 93 Width: 10 Height: 6
+X: 170 Y: 94 Width: 20 Height: 8
+X: 193 Y: 87 Width: 11 Height: 12
+X: 211 Y: 89 Width: 10 Height: 9
+X: 212 Y: 102 Width: 10 Height: 7
+X: 231 Y: 89 Width: 14 Height: 8
+X: 157 Y: 79 Width: 10 Height: 8
+X: 195 Y: 113 Width: 15 Height: 15
+X: 231 Y: 124 Width: 19 Height: 14
+X: 281 Y: 150 Width: 13 Height: 10
+X: 262 Y: 171 Width: 24 Height: 13
+X: 187 Y: 148 Width: 23 Height: 20
+X: 177 Y: 225 Width: 21 Height: 11
+
+-----------------------
+Frame 39:
+X: 168 Y: 218 Width: 38 Height: 16
+X: 263 Y: 170 Width: 19 Height: 14
+X: 270 Y: 145 Width: 26 Height: 16
+X: 223 Y: 119 Width: 25 Height: 16
+X: 187 Y: 149 Width: 19 Height: 16
+X: 195 Y: 110 Width: 14 Height: 13
+X: 213 Y: 100 Width: 12 Height: 10
+X: 211 Y: 89 Width: 14 Height: 16
+X: 229 Y: 91 Width: 10 Height: 8
+X: 228 Y: 76 Width: 9 Height: 9
+X: 192 Y: 90 Width: 10 Height: 9
+X: 182 Y: 73 Width: 9 Height: 10
+X: 175 Y: 89 Width: 10 Height: 11
+X: 162 Y: 75 Width: 5 Height: 11
+X: 151 Y: 89 Width: 6 Height: 11
+X: 43 Y: 91 Width: 12 Height: 7
+X: 197 Y: 74 Width: 8 Height: 8
+
+-----------------------
+Frame 40:
+X: 251 Y: 158 Width: 24 Height: 14
+X: 268 Y: 139 Width: 19 Height: 15
+X: 302 Y: 165 Width: 25 Height: 20
+X: 170 Y: 197 Width: 18 Height: 15
+X: 180 Y: 144 Width: 22 Height: 12
+X: 223 Y: 120 Width: 18 Height: 13
+X: 194 Y: 110 Width: 13 Height: 9
+X: 149 Y: 104 Width: 8 Height: 6
+X: 154 Y: 85 Width: 8 Height: 7
+X: 171 Y: 87 Width: 16 Height: 13
+X: 196 Y: 85 Width: 10 Height: 13
+X: 210 Y: 93 Width: 8 Height: 11
+X: 208 Y: 84 Width: 13 Height: 12
+X: 228 Y: 88 Width: 14 Height: 11
+X: 158 Y: 74 Width: 15 Height: 12
+X: 27 Y: 93 Width: 20 Height: 12
+
+-----------------------
+Frame 41:
+X: 29 Y: 93 Width: 18 Height: 9
+X: 155 Y: 197 Width: 34 Height: 18
+X: 177 Y: 138 Width: 20 Height: 17
+X: 250 Y: 158 Width: 18 Height: 11
+X: 267 Y: 137 Width: 16 Height: 14
+X: 297 Y: 161 Width: 28 Height: 21
+X: 227 Y: 117 Width: 14 Height: 13
+X: 192 Y: 106 Width: 10 Height: 15
+X: 144 Y: 102 Width: 14 Height: 14
+X: 150 Y: 85 Width: 12 Height: 11
+X: 170 Y: 88 Width: 15 Height: 11
+X: 196 Y: 89 Width: 7 Height: 10
+X: 207 Y: 93 Width: 14 Height: 12
+X: 209 Y: 83 Width: 12 Height: 10
+X: 227 Y: 85 Width: 18 Height: 10
+X: 164 Y: 74 Width: 10 Height: 7
+
+-----------------------
+Frame 42:
+X: 154 Y: 82 Width: 9 Height: 8
+X: 170 Y: 85 Width: 20 Height: 12
+X: 194 Y: 83 Width: 9 Height: 9
+X: 210 Y: 79 Width: 10 Height: 9
+X: 231 Y: 82 Width: 11 Height: 12
+X: 210 Y: 90 Width: 7 Height: 13
+X: 192 Y: 106 Width: 14 Height: 11
+X: 225 Y: 115 Width: 21 Height: 11
+X: 259 Y: 133 Width: 27 Height: 13
+X: 244 Y: 151 Width: 28 Height: 19
+X: 295 Y: 162 Width: 22 Height: 23
+X: 173 Y: 130 Width: 27 Height: 21
+X: 159 Y: 189 Width: 28 Height: 18
+X: 27 Y: 84 Width: 15 Height: 19
+
+-----------------------
+Frame 43:
+X: 20 Y: 88 Width: 19 Height: 19
+X: 161 Y: 174 Width: 20 Height: 17
+X: 178 Y: 128 Width: 25 Height: 22
+X: 241 Y: 146 Width: 22 Height: 14
+X: 256 Y: 127 Width: 21 Height: 14
+X: 291 Y: 155 Width: 21 Height: 20
+X: 265 Y: 206 Width: 37 Height: 22
+X: 224 Y: 110 Width: 14 Height: 13
+X: 191 Y: 106 Width: 13 Height: 7
+X: 208 Y: 94 Width: 13 Height: 9
+X: 229 Y: 85 Width: 10 Height: 12
+X: 210 Y: 81 Width: 14 Height: 12
+X: 196 Y: 83 Width: 8 Height: 11
+X: 176 Y: 85 Width: 15 Height: 11
+X: 155 Y: 81 Width: 10 Height: 11
+X: 148 Y: 95 Width: 19 Height: 15
+
+-----------------------
+Frame 44:
+X: 208 Y: 77 Width: 15 Height: 12
+X: 229 Y: 80 Width: 10 Height: 9
+X: 210 Y: 91 Width: 12 Height: 8
+X: 192 Y: 81 Width: 9 Height: 13
+X: 175 Y: 84 Width: 12 Height: 10
+X: 159 Y: 83 Width: 12 Height: 12
+X: 150 Y: 92 Width: 11 Height: 11
+X: 185 Y: 131 Width: 7 Height: 9
+X: 190 Y: 101 Width: 11 Height: 10
+X: 221 Y: 109 Width: 20 Height: 14
+X: 259 Y: 130 Width: 14 Height: 12
+X: 243 Y: 143 Width: 21 Height: 16
+X: 282 Y: 159 Width: 25 Height: 11
+X: 264 Y: 209 Width: 33 Height: 20
+X: 157 Y: 169 Width: 21 Height: 19
+X: 16 Y: 93 Width: 11 Height: 10
+
+-----------------------
+Frame 45:
+X: 16 Y: 95 Width: 14 Height: 13
+X: 156 Y: 167 Width: 26 Height: 19
+X: 176 Y: 123 Width: 17 Height: 22
+X: 220 Y: 108 Width: 18 Height: 10
+X: 234 Y: 138 Width: 22 Height: 14
+X: 255 Y: 123 Width: 20 Height: 18
+X: 284 Y: 155 Width: 16 Height: 16
+X: 255 Y: 198 Width: 32 Height: 24
+X: 243 Y: 213 Width: 27 Height: 21
+X: 189 Y: 97 Width: 11 Height: 15
+X: 206 Y: 88 Width: 15 Height: 11
+X: 195 Y: 86 Width: 9 Height: 8
+X: 174 Y: 84 Width: 15 Height: 13
+X: 147 Y: 93 Width: 10 Height: 15
+X: 155 Y: 82 Width: 9 Height: 10
+X: 229 Y: 85 Width: 14 Height: 9
+
+-----------------------
+Frame 46:
+X: 230 Y: 82 Width: 8 Height: 9
+X: 221 Y: 109 Width: 14 Height: 11
+X: 206 Y: 87 Width: 14 Height: 11
+X: 207 Y: 79 Width: 12 Height: 8
+X: 194 Y: 81 Width: 8 Height: 12
+X: 175 Y: 84 Width: 14 Height: 11
+X: 155 Y: 77 Width: 9 Height: 12
+X: 148 Y: 95 Width: 10 Height: 11
+X: 172 Y: 117 Width: 21 Height: 19
+X: 188 Y: 99 Width: 19 Height: 10
+X: 236 Y: 135 Width: 17 Height: 13
+X: 252 Y: 124 Width: 24 Height: 11
+X: 288 Y: 155 Width: 20 Height: 18
+X: 268 Y: 196 Width: 20 Height: 28
+X: 230 Y: 213 Width: 28 Height: 18
+X: 155 Y: 162 Width: 18 Height: 21
+X: 9 Y: 92 Width: 16 Height: 15
+
+-----------------------
+Frame 47:
+X: 10 Y: 95 Width: 12 Height: 10
+X: 159 Y: 163 Width: 12 Height: 17
+X: 175 Y: 120 Width: 21 Height: 14
+X: 239 Y: 136 Width: 15 Height: 19
+X: 255 Y: 122 Width: 22 Height: 14
+X: 282 Y: 151 Width: 19 Height: 15
+X: 251 Y: 196 Width: 27 Height: 22
+X: 222 Y: 202 Width: 34 Height: 29
+X: 187 Y: 93 Width: 13 Height: 14
+X: 220 Y: 107 Width: 18 Height: 12
+X: 208 Y: 88 Width: 6 Height: 10
+X: 225 Y: 82 Width: 19 Height: 8
+X: 190 Y: 77 Width: 14 Height: 14
+X: 178 Y: 85 Width: 13 Height: 10
+X: 150 Y: 90 Width: 8 Height: 14
+
+-----------------------
+Frame 48:
+X: 4 Y: 95 Width: 15 Height: 16
+X: 173 Y: 118 Width: 20 Height: 18
+X: 146 Y: 89 Width: 20 Height: 14
+X: 176 Y: 80 Width: 12 Height: 15
+X: 189 Y: 100 Width: 11 Height: 6
+X: 191 Y: 77 Width: 11 Height: 13
+X: 208 Y: 88 Width: 8 Height: 11
+X: 217 Y: 109 Width: 17 Height: 10
+X: 252 Y: 123 Width: 19 Height: 11
+X: 232 Y: 134 Width: 23 Height: 18
+X: 280 Y: 152 Width: 23 Height: 11
+X: 257 Y: 194 Width: 29 Height: 24
+X: 229 Y: 210 Width: 29 Height: 16
+X: 151 Y: 157 Width: 20 Height: 15
