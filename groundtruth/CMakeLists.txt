@@ -31,13 +31,14 @@ include_directories (${CMAKE_BINARY_DIR}
 
 set (SRCS ${SRCS} 
 		rect_groundtruth.cpp
+		rect_groundtruth_Arquivo.cpp
 	)
 
 add_library(RectGroundtruthLibs ${SRCS})
 
-add_executable (rect_groundtruth rect_groundtruth.cpp)
+add_executable (rect_groundtruth_Arquivo rect_groundtruth_Arquivo.cpp)
 
-target_link_libraries (rect_groundtruth RectGroundtruthLibs ${OpenCV_LIBS})
+target_link_libraries (rect_groundtruth_Arquivo RectGroundtruthLibs ${OpenCV_LIBS})
 
 # add the install targets
-install (TARGETS rect_groundtruth DESTINATION bin)
+install (TARGETS rect_groundtruth_Arquivo DESTINATION bin)
