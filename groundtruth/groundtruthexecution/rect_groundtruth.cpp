@@ -36,10 +36,17 @@ void writeFile ();
 int main(int argc, char* argv[]) {
 	help();
 
+	int j;
+	for (j = 0; argv[1][j] != '\0'; j++) {
+	}
 	bool running = true;
 	char arquivoTxt[10];
 	strcpy(arquivoTxt,argv[1]);
-	arquivoTxt[1] = '_';
+	if (j == 5) {
+		arquivoTxt[1] = '_';
+	} else {
+		arquivoTxt[2] = '_';
+	}
 	strcat(arquivoTxt,".txt");
 
 	cout << arquivoTxt << endl;
