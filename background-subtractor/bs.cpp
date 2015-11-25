@@ -100,11 +100,26 @@ void processVideo(char* videoFilename) {
         //get the frame number and write it on the current frame
         
         rectangle(frame, cv::Point(10, 2), cv::Point(100,20), cv::Scalar(255,255,255), -1);
+
+        // Blob detection
+
+        // Set up the detector with default parameters.
+        cv::SimpleBlobDetector detector;
+         
+        // Detect blobs.
+        std::vector<KeyPoint> keypoints;
+        detector.detect( fgMaskMOG, keypoints);
+         
+        // Draw detected blobs as red circles.
+        // DrawMatchesFlags::DRAW_RICH_KEYPOINTS flag ensures the size of the circle corresponds to the size of blob
+        cv::Mat im_with_keypoints;
+        cv::drawKeypoints( fgMaskMOG, keypoints, im_with_keypoints, cv::Scalar(0,0,255), DrawMatchesFlags::DRAW_RICH_KEYPOINTS );
         
         //show the current frame and the fg masks
         imshow("Frame", frame);
         imshow("FG Mask MOG", fgMaskMOG);
         imshow("FG Mask MOG 2", fgMaskMOG2);
+        imshow("FG Mask MOG with blob keypoints", im_with_keypoints);
         //get the input from the keyboard
         keyboard = waitKey( 0 );
 
