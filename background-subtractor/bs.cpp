@@ -7,6 +7,7 @@
 //C++
 #include <iostream>
 #include <sstream>
+#include "../cvBlob/cvblob.h"
 
 using namespace cv;
 using namespace std;
