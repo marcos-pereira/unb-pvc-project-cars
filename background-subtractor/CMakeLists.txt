@@ -7,7 +7,7 @@
 #============================================================================
 
 cmake_minimum_required(VERSION 2.8.4 FATAL_ERROR)
-project (RectGroundtruth)
+project (background_subtractor)
 
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
