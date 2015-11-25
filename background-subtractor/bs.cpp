@@ -7,7 +7,11 @@
 //C++
 #include <iostream>
 #include <sstream>
+
 #include "../cvBlob/cvblob.h"
+#include "BlobTracking.h"
+#include "cv.h"
+
 
 using namespace cv;
 using namespace std;
@@ -113,7 +117,11 @@ void processVideo(char* videoFilename) {
         // Draw detected blobs as red circles.
         // DrawMatchesFlags::DRAW_RICH_KEYPOINTS flag ensures the size of the circle corresponds to the size of blob
         cv::Mat im_with_keypoints;
-        cv::drawKeypoints( fgMaskMOG, keypoints, im_with_keypoints, cv::Scalar(0,0,255), DrawMatchesFlags::DRAW_RICH_KEYPOINTS );
+        cv::drawKeypoints( frame, keypoints, im_with_keypoints, cv::Scalar(0,0,255), DrawMatchesFlags::DRAW_RICH_KEYPOINTS );
+
+        // Blob detection using BlobTracking
+        // TODO: edit cmakelists based on the simple_vehicle_detection cmakelists to solve lib conflicts
+        // BlobTracking blob_tracker;
         
         //show the current frame and the fg masks
         imshow("Frame", frame);
