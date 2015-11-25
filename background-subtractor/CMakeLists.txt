@@ -31,6 +31,8 @@ include_directories (${CMAKE_BINARY_DIR}
 
 set (SRCS ${SRCS} 
 	bs.cpp
+	BlobTracking.cpp
+	BlobTracking.h
 	)
 
 add_library(BackgroundSubtratcorLibs ${SRCS})
