@@ -1,3 +1,6 @@
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/core/core.hpp"
 #include <stdio.h>
 #include <cv.h>
 #include <highgui.h>
@@ -72,9 +75,26 @@ int main(int argc, char** argv)
 
 void detect(IplImage *img)
 {
-  CvSize img_size = cvGetSize(img);
+  // cv::Mat img_mat(img);
+  // // Create ROI to desired area
+  // cv::Mat roi_image = img_mat(cv::Rect(0,img_mat.rows*1/3.5,img_mat.cols,img_mat.rows*2/3.5));
+  // imshow("roi_image",roi_image);
+  
+  // IplImage ipl_img = img_mat;
+
+  cvSetImageROI(img, cvRect(0, img->height*1/3.5, img->width, img->height*2/3.5));
+  IplImage *img2 = cvCreateImage(cvGetSize(img),
+                           img->depth,
+                           img->nChannels);
+  cvCopy(img, img2, NULL);
+  cvResetImageROI(img);
+
+  //OpenCV C++ function
+  //CascadeClassifier::detectMultiScale(img_mat,cascade,) 
+  
+  CvSize img_size = cvGetSize(img2);
   CvSeq *object = cvHaarDetectObjects(
-    img,
+    img2,
     cascade,
     storage,
     1.1, //1.1,//1.5, //-------------------SCALE FACTOR
@@ -88,11 +108,12 @@ void detect(IplImage *img)
   for(int i = 0 ; i < ( object ? object->total : 0 ) ; i++)
   {
     CvRect *r = (CvRect*)cvGetSeqElem(object, i);
-    cvRectangle(img,
+    cvRectangle(img2,
       cvPoint(r->x, r->y),
       cvPoint(r->x + r->width, r->y + r->height),
       CV_RGB(255, 0, 0), 2, 8, 0);
   }
 
-  cvShowImage("video", img);
+  cvShowImage("video", img2);
+  cvWaitKey(0);
 }
