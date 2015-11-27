@@ -77,12 +77,12 @@ void detect(IplImage *img)
 {
   // cv::Mat img_mat(img);
   // // Create ROI to desired area
-  // cv::Mat roi_image = img_mat(cv::Rect(0,img_mat.rows*1/3.5,img_mat.cols,img_mat.rows*2/3.5));
+  // cv::Mat roi_image = img_mat(cv::Rect(img_mat.cols*1/2.6,img_mat.rows*1/3.5,img_mat.cols,img_mat.rows*2/3.5));
   // imshow("roi_image",roi_image);
   
   // IplImage ipl_img = img_mat;
 
-  cvSetImageROI(img, cvRect(0, img->height*1/3.5, img->width, img->height*2/3.5));
+  cvSetImageROI(img, cvRect(img->width*1/2.6, img->height*1/3.5, img->width, img->height*2/3.5));
   IplImage *img2 = cvCreateImage(cvGetSize(img),
                            img->depth,
                            img->nChannels);
