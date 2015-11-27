@@ -26,6 +26,7 @@ bool selectObject = false;
 Point origin;
 Rect selection;
 Mat frame;
+Mat ROI;
 int counterFrame = 0;
 FILE * fp;
 
@@ -70,7 +71,9 @@ int main(int argc, char* argv[]) {
 	capture2.read(frame);
 	counterFrame++;
 
-	namedWindow("Video Capture");
+	namedWindow("Video Capture",WINDOW_NORMAL);
+	resizeWindow("Video Capture", 850, 900);
+	
 	setMouseCallback("Video Capture", onMouse, 0);
 
 	//Estrutura de laco de repeticao para executar ate o penultimo frame, visto que a maioria dos ultimos frames
@@ -80,7 +83,9 @@ int main(int argc, char* argv[]) {
 			counterFrame++;
 			cout << "Frame " << counterFrame << endl;
 
-			imshow("Video Capture", frame);
+			rectangle(frame, Rect(frame.cols*1/2.6,frame.rows*1/3.5,frame.cols - frame.cols/2.6,frame.rows*2/3.1),Scalar(0,0,255),1,8,0);
+
+			imshow("Video Capture",frame);
 			char c;
 			do {
 				c = waitKey(0);
