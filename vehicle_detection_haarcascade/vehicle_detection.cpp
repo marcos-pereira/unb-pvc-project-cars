@@ -4,11 +4,13 @@
 #include <stdio.h>
 #include <cv.h>
 #include <highgui.h>
+#include <sstream>
+#include <fstream>
 
 CvHaarClassifierCascade *cascade;
 CvMemStorage            *storage;
 
-void detect(IplImage *img);
+void detect(IplImage *img, char** argv, int frame_number);
 
 int main(int argc, char** argv)
 {
@@ -34,7 +36,7 @@ int main(int argc, char** argv)
 
   assert(cascade && storage && capture);
 
-  cvNamedWindow("video", 1);
+  //cvNamedWindow("video", 1);
 
   IplImage* frame1 = cvQueryFrame(capture);
   frame = cvCreateImage(cvSize((int)((frame1->width*input_resize_percent)/100) , (int)((frame1->height*input_resize_percent)/100)), frame1->depth, frame1->nChannels);
@@ -42,9 +44,11 @@ int main(int argc, char** argv)
   const int KEY_SPACE  = 32;
   const int KEY_ESC    = 27;
 
+  int frame_number = 0;
+
   int key = 0;
   do
-  {
+  {    
     frame1 = cvQueryFrame(capture);
 
     if(!frame1)
@@ -52,7 +56,8 @@ int main(int argc, char** argv)
 
     cvResize(frame1, frame);
 
-    detect(frame);
+    detect(frame, argv, frame_number);
+    frame_number++;
 
     key = cvWaitKey(10);
 
@@ -73,14 +78,23 @@ int main(int argc, char** argv)
   return 0;
 }
 
-void detect(IplImage *img)
+void detect(IplImage *img, char** argv, int frame_number)
 {
+
+  std::ofstream detected_cars_datafile;
+  std::string detected_cars_filename;
+  detected_cars_filename = argv[2];
+  detected_cars_filename.erase(0,detected_cars_filename.find_last_of("/")+1);
+  detected_cars_filename += ".txt";
+  std::cout << "cars file name: " << detected_cars_filename << std::endl;
+  detected_cars_datafile.open (detected_cars_filename.c_str(), std::ios::app);
+
+  // cv::Mat implementation to debug ROI and also show original image
   cv::Mat img_mat(img);
   // Create ROI to desired area
   imshow("original frame", img_mat);
   // cv::Mat roi_image = img_mat(cv::Rect(img_mat.cols*1/2.6,img_mat.rows*1/3.5,img_mat.cols - img_mat.cols/2.6,img_mat.rows*2/3.1));
   // imshow("roi_image",roi_image);
-  // std::cout << "img_mat.cols" << img_mat.cols << std::endl;
   
   // IplImage ipl_img = img_mat;
 
@@ -114,7 +128,12 @@ void detect(IplImage *img)
       cvPoint(r->x, r->y),
       cvPoint(r->x + r->width, r->y + r->height),
       CV_RGB(255, 0, 0), 2, 8, 0);
+
+    // write rectangles to file
+    detected_cars_datafile << frame_number << ";" << r->x << ";" << r->y << ";" << r->x + r->width << ";" << r->y + r->height << ";" << std::endl;
   }
+
+  detected_cars_datafile.close();
 
   cvShowImage("ROI", img2);
   cvWaitKey(0);
