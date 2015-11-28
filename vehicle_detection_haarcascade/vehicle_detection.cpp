@@ -18,7 +18,7 @@ int main(int argc, char** argv)
   
   if(argc < 3)
   {
-    std::cout << "Usage " << argv[0] << " cascade.xml video.avi" << std::endl;
+    std::cout << "Usage " << argv[0] << " path_to_cars3.xml path_to_video.avi" << std::endl;
     return 0;
   }
 
@@ -75,23 +75,25 @@ int main(int argc, char** argv)
 
 void detect(IplImage *img)
 {
-  // cv::Mat img_mat(img);
-  // // Create ROI to desired area
-  // cv::Mat roi_image = img_mat(cv::Rect(img_mat.cols*1/2.6,img_mat.rows*1/3.5,img_mat.cols,img_mat.rows*2/3.5));
+  cv::Mat img_mat(img);
+  // Create ROI to desired area
+  imshow("original frame", img_mat);
+  // cv::Mat roi_image = img_mat(cv::Rect(img_mat.cols*1/2.6,img_mat.rows*1/3.5,img_mat.cols - img_mat.cols/2.6,img_mat.rows*2/3.1));
   // imshow("roi_image",roi_image);
+  // std::cout << "img_mat.cols" << img_mat.cols << std::endl;
   
   // IplImage ipl_img = img_mat;
 
-  cvSetImageROI(img, cvRect(img->width*1/2.6, img->height*1/3.5, img->width, img->height*2/3.5));
+  cvSetImageROI(img, cvRect(img->width*1/2.6, img->height*1/3.5, img->width - img->width*1/2.6, img->height*2/3.1));
   IplImage *img2 = cvCreateImage(cvGetSize(img),
                            img->depth,
                            img->nChannels);
+
+  // std::cout << "img->width" << img->width << std::endl;
+
   cvCopy(img, img2, NULL);
   cvResetImageROI(img);
 
-  //OpenCV C++ function
-  //CascadeClassifier::detectMultiScale(img_mat,cascade,) 
-  
   CvSize img_size = cvGetSize(img2);
   CvSeq *object = cvHaarDetectObjects(
     img2,
@@ -114,6 +116,6 @@ void detect(IplImage *img)
       CV_RGB(255, 0, 0), 2, 8, 0);
   }
 
-  cvShowImage("video", img2);
+  cvShowImage("ROI", img2);
   cvWaitKey(0);
 }
