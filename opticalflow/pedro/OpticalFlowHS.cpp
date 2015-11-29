@@ -2,10 +2,13 @@
 
 #define LAMBDA      0.01
 #define SMOOTH      9
-#define THRESH_VEL  1
+#define THRESH_VEL  .7
+
+#define MINAREA		300
+#define MAXAREA		1700
 
 //Morph-Ops-vars---------------
-int dilation_size = 0;
+int dilation_size = 3;
 int const max_kernel_size = 21;
 
 RNG rng(12345);
@@ -16,6 +19,8 @@ Mat drawContour( const Mat , Mat );
 Mat flowDilate( const Mat );
 
 Mat flowSegmentation( IplImage*, IplImage* );
+
+IplImage* imgROI( IplImage* );
 
 void createWindows();
 
@@ -38,9 +43,8 @@ void help()
 }
 
 int main(int argc, char** argv)  
-{  
-    help();
-    
+{   
+    //	Capture
     bool running = true;
     CvCapture* capture = cvCreateFileCapture( argv[1] );
     cvSetCaptureProperty( capture, CV_CAP_PROP_FPS, 33 );
@@ -48,7 +52,11 @@ int main(int argc, char** argv)
     //  Img
     IplImage *current = 0, *next = 0, *Results = 0;   
     current =  cvQueryFrame( capture ); 
+
+    current = imgROI( current );
+
     next = cvCreateImage(cvGetSize(current),IPL_DEPTH_8U,1);
+
     //  Gray-Img
     IplImage *curr_gray = cvCreateImage(cvGetSize(current),IPL_DEPTH_8U,1);
     IplImage *next_gray = cvCreateImage(cvGetSize(current),IPL_DEPTH_8U,1);
@@ -56,7 +64,8 @@ int main(int argc, char** argv)
     
     if(!(current))
     { 
-        printf("Couldn`t start video capture\n");
+        help();
+        printf("\nCouldn`t start video capture\n");
         return -1;
     }   
       
@@ -65,12 +74,14 @@ int main(int argc, char** argv)
     while( running )
     {
         next =  cvQueryFrame( capture ); 
-        
+
         if(!(next))
         {
             printf("Video ended\n");
             break;
         }
+
+        next = imgROI( next );
 
         cvCvtColor( next, next_gray, CV_RGB2GRAY );
             
@@ -85,9 +96,10 @@ int main(int argc, char** argv)
         imshow( "Segmented Image", segmented );  
       
         //  Atualize
+        current = cvCloneImage( next );
         curr_gray = cvCloneImage( next_gray );
 
-        char c = cvWaitKey( 1 );  
+        char c = cvWaitKey( 0 );  
 
         if( c == 27 )
             running = false;
@@ -122,26 +134,51 @@ void destroyWindows()
     cvDestroyWindow( "Dilatation" );
 }
 
+IplImage* imgROI( IplImage* orig )
+{
+    IplImage *img = cvCloneImage( orig );
+    cvSetImageROI(
+        img, cvRect(img->width*1/2.6,
+        img->height*1/3.5,
+        img->width - img->width*1/2.6,
+        img->height*2/3.1)
+        );
+    IplImage *img2 = cvCreateImage(cvGetSize(img), img->depth, img->nChannels);
+    img2 = cvCloneImage( img );
+    cvResetImageROI(img);
+    return img2;
+}
+
+
 Mat drawContour( const Mat Original, Mat threshImage )
 {
     //  Transform to Mat and copy it
     Mat aux(Original), segmented;
     aux.copyTo(segmented);
 
-    int i;
+    int i, validCount = 0;
     Rect contourRect;
-    vector<vector<Point> > contours; // for storing contour
+    vector<vector<Point> > contours;
     vector<Vec4i> hierarchy;
 
     findContours( threshImage, contours, hierarchy,CV_RETR_CCOMP, CV_CHAIN_APPROX_SIMPLE );
     //  Search through contours
+    double meanArea = 0;
     for( i = 0; i < contours.size(); i++ )
     {
-        Scalar color = Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
-        contourRect = boundingRect(contours[i]);
-        rectangle( segmented, contourRect, color, 2 );
+        double area = contourArea( contours[i] );
+        if( area > MINAREA )
+        	if( area < MAXAREA )
+        	{
+        		validCount++;
+        		meanArea += area;
+        		Scalar color = Scalar( rng.uniform(200, 255), rng.uniform(200,255), rng.uniform(200,255) );
+        		contourRect = boundingRect( contours[i] );
+        		rectangle( segmented, contourRect, color, 2 );
+        	}
     }
-    
+    //	Just to visualize
+    //cout << "meanArea: " << meanArea / validCount << endl;
     return segmented;
 }
 
