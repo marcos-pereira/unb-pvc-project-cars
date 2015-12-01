@@ -1,24 +1,5 @@
 #include "include/HS.hpp"
-
-#define LAMBDA      0.01
-#define SMOOTH      9
-#define THRESH_VEL  .7
-
-#define MINAREA		300
-#define MAXAREA		1700
-
-//Morph-Ops-vars---------------
-int dilation_size = 3;
-int const max_kernel_size = 21;
-
-RNG rng(12345);
-//-----------------------------
-
-Mat drawContour( const Mat , Mat );
-
-Mat flowDilate( const Mat );
-
-Mat flowSegmentation( IplImage*, IplImage* );
+#include "include/segmentation.hpp"
 
 IplImage* imgROI( IplImage* );
 
@@ -26,26 +7,26 @@ void createWindows();
 
 void destroyWindows();
 
-
 void help()
 {
     cout <<
         "\nThis program is designed to peform a segmentation based on Optical Flow \n"
         "it`s basic usage is\n"
-            "\t./OpticalFlowHS <path/to/video/file>\n"
+        "\t     ./OpticalFlowHS <path/to/video/file>\n"
         "The parameters of the Optical flow can influence your results.\n"
-        "To alter them, just open the .cpp file and change the values on #define:\n"
-            "\tLAMBDA    - wheighting factor of cvCalcOpticalFlowHS();\n"
-            "\tSMOOTH    - Kernel size and std deviation of Gaussian`s smooth operation;\n"
-            "\tTHESH_VEL - Threshold value for velocities\n"
+        "To alter them, just open the src/segmentation.cpp file and change the values on #define:\n"
+        "\t"     "LAMBDA    - wheighting factor of cvCalcOpticalFlowHS();\n"
+        "\t"     "SMOOTH    - Kernel size and std deviation of Gaussian`s smooth operation;\n"
+        "\t"     "THESH_VEL - Threshold value for velocities\n"
         "To end video capture, press 'esc'\n"
     << endl;
 }
 
 int main(int argc, char** argv)  
 {   
-    //	Capture
     bool running = true;
+    int frameCount = 0;
+    //	Capture
     CvCapture* capture = cvCreateFileCapture( argv[1] );
     cvSetCaptureProperty( capture, CV_CAP_PROP_FPS, 33 );
 
@@ -80,7 +61,7 @@ int main(int argc, char** argv)
             printf("Video ended\n");
             break;
         }
-
+        frameCount++;
         next = imgROI( next );
 
         cvCvtColor( next, next_gray, CV_RGB2GRAY );
@@ -121,10 +102,6 @@ void createWindows()
     cvNamedWindow( "Raw Image" );  
     cvNamedWindow( "Raw Flow"  );  
     namedWindow  ( "Dilation"  );
-    
-    // Create Dilation Trackbar
-    createTrackbar( "Kernel size: ", "Dilation",
-                  &dilation_size, max_kernel_size );
 }
 
 void destroyWindows()
@@ -149,57 +126,3 @@ IplImage* imgROI( IplImage* orig )
     return img2;
 }
 
-
-Mat drawContour( const Mat Original, Mat threshImage )
-{
-    //  Transform to Mat and copy it
-    Mat aux(Original), segmented;
-    aux.copyTo(segmented);
-
-    int i, validCount = 0;
-    Rect contourRect;
-    vector<vector<Point> > contours;
-    vector<Vec4i> hierarchy;
-
-    findContours( threshImage, contours, hierarchy,CV_RETR_CCOMP, CV_CHAIN_APPROX_SIMPLE );
-    //  Search through contours
-    double meanArea = 0;
-    for( i = 0; i < contours.size(); i++ )
-    {
-        double area = contourArea( contours[i] );
-        if( area > MINAREA )
-        	if( area < MAXAREA )
-        	{
-        		validCount++;
-        		meanArea += area;
-        		Scalar color = Scalar( rng.uniform(200, 255), rng.uniform(200,255), rng.uniform(200,255) );
-        		contourRect = boundingRect( contours[i] );
-        		rectangle( segmented, contourRect, color, 2 );
-        	}
-    }
-    //	Just to visualize
-    //cout << "meanArea: " << meanArea / validCount << endl;
-    return segmented;
-}
-
-Mat flowDilate( const Mat input )
-{
-    Mat output;
-    int dilation_type = MORPH_RECT;
-    
-    Mat element = getStructuringElement( dilation_type,
-                                       Size( 2*dilation_size + 1, 2*dilation_size+1 ),
-                                       Point( dilation_size, dilation_size ) );
-    //  Apply the dilation operation
-    dilate( input, output, element );
-    imshow( "Dilation", output );
-    return output;
-}
-
-Mat flowSegmentation( IplImage* original, IplImage* iplBin )
-{
-    Mat matOrig(original), matBin( iplBin );
-    Mat mask = flowDilate( matBin );
-
-    return (drawContour( matOrig, mask ));
-}
