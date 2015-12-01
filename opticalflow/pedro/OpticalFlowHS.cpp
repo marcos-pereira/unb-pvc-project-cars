@@ -3,6 +3,8 @@
 
 IplImage* imgROI( IplImage* );
 
+string getFileName( string );
+
 void createWindows();
 
 void destroyWindows();
@@ -26,13 +28,25 @@ int main(int argc, char** argv)
 {   
     bool running = true;
     int frameCount = 0;
+
     //	Capture
     CvCapture* capture = cvCreateFileCapture( argv[1] );
     cvSetCaptureProperty( capture, CV_CAP_PROP_FPS, 33 );
 
+    //  File
+    std::string filename;
+    filename = getFileName( argv[1] );
+
     //  Img
     IplImage *current = 0, *next = 0, *Results = 0;   
     current =  cvQueryFrame( capture ); 
+
+    if(!(current))
+    { 
+        help();
+        printf("\nCouldn`t start video capture\n");
+        return -1;
+    }
 
     current = imgROI( current );
 
@@ -42,13 +56,6 @@ int main(int argc, char** argv)
     IplImage *curr_gray = cvCreateImage(cvGetSize(current),IPL_DEPTH_8U,1);
     IplImage *next_gray = cvCreateImage(cvGetSize(current),IPL_DEPTH_8U,1);
     cvCvtColor(current, curr_gray, CV_RGB2GRAY); 
-    
-    if(!(current))
-    { 
-        help();
-        printf("\nCouldn`t start video capture\n");
-        return -1;
-    }   
       
     createWindows();
 
@@ -61,6 +68,7 @@ int main(int argc, char** argv)
             printf("Video ended\n");
             break;
         }
+
         frameCount++;
         next = imgROI( next );
 
@@ -68,7 +76,7 @@ int main(int argc, char** argv)
             
         Results = opticalFlowHS( curr_gray, next_gray, LAMBDA, SMOOTH, THRESH_VEL );
 
-        Mat segmented = flowSegmentation( current, Results );
+        Mat segmented = flowSegmentation( filename ,current, Results, frameCount );
 
         //  Show tracking  
         cvShowImage( "Raw Image", current );  
@@ -109,6 +117,19 @@ void destroyWindows()
     cvDestroyWindow( "Raw Image"  );  
     cvDestroyWindow( "Raw Flow"   );  
     cvDestroyWindow( "Dilatation" );
+}
+
+string getFileName( string videoName )
+{
+    string filename;
+
+    filename = videoName;
+    filename.erase( 0, filename.find_last_of("/")+1 );
+    filename += ".txt";
+
+    cout << "cars file name: " << filename << endl;
+
+    return filename;
 }
 
 IplImage* imgROI( IplImage* orig )

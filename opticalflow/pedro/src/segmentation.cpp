@@ -14,23 +14,20 @@ Mat drawContour( const Mat Original, Mat threshImage )
     vector<Vec4i> hierarchy;
 
     findContours( threshImage, contours, hierarchy,CV_RETR_CCOMP, CV_CHAIN_APPROX_SIMPLE );
+
     //  Search through contours
-    double meanArea = 0;
     for( i = 0; i < contours.size(); i++ )
     {
         double area = contourArea( contours[i] );
         if( area > MINAREA )
         	if( area < MAXAREA )
         	{
-        		validCount++;
-        		meanArea += area;
         		Scalar color = Scalar( rng.uniform(100, 200), rng.uniform(100,200), rng.uniform(100,200) );
         		contourRect = boundingRect( contours[i] );
         		rectangle( segmented, contourRect, color, 2 );
         	}
     }
-    //	Just to visualize
-    //cout << "meanArea: " << meanArea / validCount << endl;
+
     return segmented;
 }
 
@@ -43,9 +40,11 @@ Mat flowDilate( const Mat input )
     Mat element = getStructuringElement( dilation_type,
                                        Size( 2*dilation_size + 1, 2*dilation_size+1 ),
                                        Point( dilation_size, dilation_size ) );
+
     //  Apply the dilation operation
     dilate( input, output, element );
     imshow( "Dilation", output );
+
     return output;
 }
 
@@ -54,5 +53,59 @@ Mat flowSegmentation( IplImage* original, IplImage* iplBin )
     Mat matOrig(original), matBin( iplBin );
     Mat mask = flowDilate( matBin );
 
-    return (drawContour( matOrig, mask ));
+    return ( drawContour( matOrig, mask ) );
 }
+
+//--Write-to-File------------------------------------------------------//
+
+Mat drawContour( string Filename, Mat Original, Mat threshImage, int frameCount )
+{
+    RNG rng(12345);
+    
+    //	File
+    ofstream dataFile;
+    dataFile.open ( Filename.c_str(), ios::app );
+
+    //  Transform to Mat and copy it
+    Mat aux(Original), segmented;
+    aux.copyTo(segmented);
+
+    int i;
+    Rect contourRect;
+    vector<vector<Point> > contours;
+    vector<Vec4i> hierarchy;
+
+    findContours( threshImage, contours, hierarchy,CV_RETR_CCOMP, CV_CHAIN_APPROX_SIMPLE );
+
+    //  Search through contours
+    for( i = 0; i < contours.size(); i++ )
+    {
+        double area = contourArea( contours[i] );
+        if( area > MINAREA )
+        	if( area < MAXAREA )
+        	{
+        		Scalar color = Scalar( rng.uniform(100, 200), rng.uniform(100,200), rng.uniform(100,200) );
+        		contourRect = boundingRect( contours[i] );
+        		rectangle( segmented, contourRect, color, 2 );
+        		
+        		dataFile << frameCount 		<< ";" 
+        				 << contourRect.x 	<< ";" 
+        				 << contourRect.y 	<< ";" 
+        				 << contourRect.x + contourRect.width  << ";" 
+        				 << contourRect.y + contourRect.height << ";" 
+        				 << endl;
+        	}
+    }
+
+    return segmented;
+}
+
+Mat flowSegmentation(  string Filename, IplImage* original, IplImage* iplBin, int frameCount )
+{
+    Mat matOrig(original), matBin( iplBin );
+    Mat mask = flowDilate( matBin );
+
+    return ( drawContour( Filename, matOrig, mask, frameCount ) );
+}
+
+//--------------------------------------------------------------------//
