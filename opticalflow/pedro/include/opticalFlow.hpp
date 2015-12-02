@@ -15,7 +15,7 @@ using namespace std;
 #define THRESH_VEL  .7
 
 //-Draw-Contours-----------//
-#define MINAREA		300
+#define MINAREA		250
 #define MAXAREA		1700
 
 //-Morphological-Ops-------//

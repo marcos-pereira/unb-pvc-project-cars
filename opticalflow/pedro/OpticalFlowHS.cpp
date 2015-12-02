@@ -5,6 +5,8 @@ IplImage* imgROI( IplImage* );
 
 string getFileName( string );
 
+void createNewFile( string );
+
 void createWindows();
 
 void destroyWindows();
@@ -36,15 +38,19 @@ int main(int argc, char** argv)
     //  File
     std::string filename;
     filename = getFileName( argv[1] );
+    createNewFile( filename );
 
     //  Img
     IplImage *current = 0, *next = 0, *Results = 0;   
     current =  cvQueryFrame( capture ); 
+    //  skip first frame
+    current = cvQueryFrame( capture );
+    frameCount++;
 
     if(!(current))
     { 
         help();
-        printf("\nCouldn`t start video capture\n");
+        cout << "\nCouldn`t start video capture" << endl;
         return -1;
     }
 
@@ -130,6 +136,13 @@ string getFileName( string videoName )
     cout << "cars file name: " << filename << endl;
 
     return filename;
+}
+
+void createNewFile( string filename )
+{
+    ofstream dataFile;
+    dataFile.open ( filename.c_str(), ios::out );
+    dataFile.close ();
 }
 
 IplImage* imgROI( IplImage* orig )
