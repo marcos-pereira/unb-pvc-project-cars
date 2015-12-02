@@ -80,7 +80,7 @@ std::vector<std::vector<double>> HaarCarDetector::GetCarsRectangles(IplImage *im
     rectangles_properties.push_back(r->width);
     rectangles_properties.push_back(r->x + r->width/2);
     rectangles_properties.push_back(r->y + r->height/2);
-    rectangles_properties.push_back(r->width * r->height);    
+    // rectangles_properties.push_back(r->width * r->height);    
     rectangles.push_back(rectangles_properties);    
     rectangles_properties.clear();
   }
