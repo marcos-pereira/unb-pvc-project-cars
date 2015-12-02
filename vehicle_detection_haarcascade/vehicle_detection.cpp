@@ -10,7 +10,7 @@
 CvHaarClassifierCascade *cascade;
 CvMemStorage            *storage;
 
-void detect(IplImage *img, char** argv, int frame_number);
+std::vector<std::vector<double>> detect(IplImage *img, char** argv, int frame_number);
 
 int main(int argc, char** argv)
 {
@@ -44,6 +44,17 @@ int main(int argc, char** argv)
   const int KEY_SPACE  = 32;
   const int KEY_ESC    = 27;
 
+  // File variables
+  std::ofstream detected_cars_datafile;
+  std::string detected_cars_filename;
+  detected_cars_filename = argv[2];
+  detected_cars_filename.erase(0,detected_cars_filename.find_last_of("/")+1);
+  detected_cars_filename += ".txt";
+  std::cout << "cars file name: " << detected_cars_filename << std::endl;
+  detected_cars_datafile.open (detected_cars_filename.c_str(), std::ios::out);
+
+  std::vector<std::vector<double>> rectangles;
+
   int frame_number = 0;
 
   int key = 0;
@@ -56,7 +67,18 @@ int main(int argc, char** argv)
 
     cvResize(frame1, frame);
 
-    detect(frame, argv, frame_number);
+    rectangles = detect(frame, argv, frame_number);
+
+    // write rectangles to file
+    for(int ii = 0; ii < rectangles.size(); ii++)
+    {
+      for(int jj = 0; jj < rectangles[ii].size() ; jj++)
+      {
+        detected_cars_datafile << rectangles[ii][jj] << ";";
+      }
+      detected_cars_datafile << std::endl;
+    }
+    
     frame_number++;
 
     key = cvWaitKey(10);
@@ -69,6 +91,8 @@ int main(int argc, char** argv)
 
   }while(1);
 
+  detected_cars_datafile.close();
+
   cvDestroyAllWindows();
   cvReleaseImage(&frame);
   cvReleaseCapture(&capture);
@@ -78,16 +102,8 @@ int main(int argc, char** argv)
   return 0;
 }
 
-void detect(IplImage *img, char** argv, int frame_number)
+std::vector<std::vector<double>> detect(IplImage *img, char** argv, int frame_number)
 {
-
-  std::ofstream detected_cars_datafile;
-  std::string detected_cars_filename;
-  detected_cars_filename = argv[2];
-  detected_cars_filename.erase(0,detected_cars_filename.find_last_of("/")+1);
-  detected_cars_filename += ".txt";
-  std::cout << "cars file name: " << detected_cars_filename << std::endl;
-  detected_cars_datafile.open (detected_cars_filename.c_str(), std::ios::app);
 
   // cv::Mat implementation to debug ROI and also show original image
   cv::Mat img_mat(img);
@@ -120,6 +136,9 @@ void detect(IplImage *img, char** argv, int frame_number)
     img_size //cvSize(70,70)//cvSize(640,480)  //---------MAXSIZE
     );
 
+  std::vector<std::vector<double>> rectangles;
+  std::vector<double> rectangles_properties;
+
   std::cout << "Total: " << object->total << " cars" << std::endl;
   for(int i = 0 ; i < ( object ? object->total : 0 ) ; i++)
   {
@@ -128,13 +147,19 @@ void detect(IplImage *img, char** argv, int frame_number)
       cvPoint(r->x, r->y),
       cvPoint(r->x + r->width, r->y + r->height),
       CV_RGB(255, 0, 0), 2, 8, 0);
-
-    // write rectangles to file
-    detected_cars_datafile << frame_number << ";" << r->x << ";" << r->y << ";" << r->x + r->width << ";" << r->y + r->height << ";" << std::endl;
+    rectangles_properties.push_back(frame_number);
+    rectangles_properties.push_back(r->x);
+    rectangles_properties.push_back(r->y);
+    rectangles_properties.push_back(r->x + r->width/2);
+    rectangles_properties.push_back(r->y + r->height/2);
+    rectangles_properties.push_back(r->width * r->height);    
+    rectangles.push_back(rectangles_properties);    
+    rectangles_properties.clear();
   }
 
-  detected_cars_datafile.close();
 
   cvShowImage("ROI", img2);
   cvWaitKey(0);
+
+  return rectangles;
 }
