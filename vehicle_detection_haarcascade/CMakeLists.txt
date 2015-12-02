@@ -3,7 +3,7 @@
 #  Departamento de Ciencia da Computacao
 #  Principios de Visao Computacional
 #  Trabalho Final: Contador de Carros
-#  Integrantes: Marcos, Felipe Dalosto, Maximillian, Felipe Spinola, Pedro, Bruno Donnici
+#  Integrantes: Marcos, Felipe Dalosto, Maximillian, Felipe Spinola, Pedro, Bruno Donnici, Gustavo
 #============================================================================
 
 cmake_minimum_required(VERSION 2.8.4 FATAL_ERROR)
@@ -31,6 +31,8 @@ include_directories (${CMAKE_BINARY_DIR}
 
 set (SRCS ${SRCS} 
 	vehicle_detection.cpp
+	HaarCarDetector.cpp
+	HaarCarDetector.h
 	)
 
 add_library(VehicleDetectionLibs ${SRCS})

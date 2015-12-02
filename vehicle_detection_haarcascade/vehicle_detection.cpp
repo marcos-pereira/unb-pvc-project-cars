@@ -6,14 +6,16 @@
 #include <highgui.h>
 #include <sstream>
 #include <fstream>
+#include <HaarCarDetector.h>
 
 CvHaarClassifierCascade *cascade;
 CvMemStorage            *storage;
-
-std::vector<std::vector<double>> detect(IplImage *img, char** argv, int frame_number);
+  
+std::vector<std::vector<double>> detect(IplImage *img, int frame_number);
 
 int main(int argc, char** argv)
 {
+  HaarCarDetector haarcascade_detector(argv[1]);
   CvCapture *capture;
   IplImage  *frame;
   int input_resize_percent = 100;
@@ -67,7 +69,10 @@ int main(int argc, char** argv)
 
     cvResize(frame1, frame);
 
-    rectangles = detect(frame, argv, frame_number);
+    // Function that detect cars 
+    // rectangles = detect(frame, frame_number);
+
+    rectangles = haarcascade_detector.GetCarsRectangles(frame, frame_number);
 
     // write rectangles to file
     for(int ii = 0; ii < rectangles.size(); ii++)
@@ -78,7 +83,7 @@ int main(int argc, char** argv)
       }
       detected_cars_datafile << std::endl;
     }
-    
+
     frame_number++;
 
     key = cvWaitKey(10);
@@ -102,7 +107,7 @@ int main(int argc, char** argv)
   return 0;
 }
 
-std::vector<std::vector<double>> detect(IplImage *img, char** argv, int frame_number)
+std::vector<std::vector<double>> detect(IplImage *img, int frame_number)
 {
 
   // cv::Mat implementation to debug ROI and also show original image
