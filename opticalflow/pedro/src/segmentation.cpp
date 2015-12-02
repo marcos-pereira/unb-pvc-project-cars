@@ -88,11 +88,13 @@ Mat drawContour( string Filename, Mat Original, Mat threshImage, int frameCount 
         		contourRect = boundingRect( contours[i] );
         		rectangle( segmented, contourRect, color, 2 );
         		
-        		dataFile << frameCount 		<< ";" 
-        				 << contourRect.x 	<< ";" 
-        				 << contourRect.y 	<< ";" 
-        				 << contourRect.x + contourRect.width  << ";" 
-        				 << contourRect.y + contourRect.height << ";" 
+        		dataFile << frameCount << ";" 
+        				 << contourRect.x   << ";" 
+        				 << contourRect.y   << ";" 
+        				 << contourRect.width   << ";" 
+        				 << contourRect.height  << ";"
+                         << (contourRect.x + contourRect.width)/2   << ";"
+                         << (contourRect.y + contourRect.height)/2  << ";"
         				 << endl;
         	}
     }
