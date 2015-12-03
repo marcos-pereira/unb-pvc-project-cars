@@ -1,4 +1,4 @@
-#include "opticalFlow.hpp"
+#include "flowCore.hpp"
 
 IplImage* visibleFlow( cv::Size, IplImage*, IplImage*, float );
 

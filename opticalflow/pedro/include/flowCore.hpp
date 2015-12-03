@@ -22,3 +22,9 @@ using namespace std;
 #define DILATESIZE 	3
 
 //--------------------------//
+
+IplImage* imgROI( IplImage* );
+
+string getFileName( string );
+
+void createNewFile( string );

@@ -1,4 +1,4 @@
-#include "opticalFlow.hpp"
+#include "flowCore.hpp"
 
 Mat drawContour( const Mat , Mat );
 
