@@ -1,0 +1,17 @@
+Optical FLow – HS
+
+	//--Parameters--------------//
+
+	//-Optical-Flow------------//
+	#define LAMBDA      0.1
+	#define SMOOTH      9
+	#define THRESH_VEL  .5
+
+	//-Draw-Contours-----------//
+	#define MINAREA		250
+	#define MAXAREA		2000
+
+	//-Morphological-Ops-------//
+	#define DILATESIZE 	1
+
+	//--------------------------//
