@@ -8,9 +8,9 @@
 #include <iostream>
 #include <sstream>
 
-#include "../cvBlob/cvblob.h"
+#include "cvBlob/cvblob.h"
 #include "BlobTracking.h"
-#include "cv.h"
+#include <opencv/cv.h>
 
 
 using namespace cv;
@@ -121,7 +121,10 @@ void processVideo(char* videoFilename) {
 
         // Blob detection using BlobTracking
         // TODO: edit cmakelists based on the simple_vehicle_detection cmakelists to solve lib conflicts
-        // BlobTracking blob_tracker;
+        BlobTracking *blob_tracker = new BlobTracking();
+        Mat img_output;
+        Mat img_mask = imread("imgTest/firstframe.png");
+        blob_tracker->process(frame, img_mask, img_output);
         
         //show the current frame and the fg masks
         imshow("Frame", frame);
