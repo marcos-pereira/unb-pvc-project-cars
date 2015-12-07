@@ -4,8 +4,8 @@ Optical FLow – HS
 
 	//-Optical-Flow------------//
 	#define LAMBDA      0.1
-	#define SMOOTH      9
-	#define THRESH_VEL  .7
+	#define SMOOTH      13
+	#define THRESH_VEL  .5
 
 	//-Draw-Contours-----------//
 	#define MINAREA		250
