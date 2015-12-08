@@ -23,8 +23,13 @@ Dentro da pasta build digite:
 	make
 Para executar ./<nomeexecutavel> <path_to_cars3.xml> <path_to_video>
 
+Pressione SPACE para pular para o próximo frame
+No terminal são exibidos quantos carros foram detectados
+Ao final do vídeo é salvo um arquivo .txt contendo a lista de carros encontrados circundados por retangulos vermelhos seguindo o padrão:
+nro_frame;x;y;height;width;centroX;centroY
+
 --- Usando Shell para rodar todos os videos ---
 Leia as instruções dentro do run_videos.sh
-
+Para que sejam executados automaticamente é preciso comentar os cvWaitKey() dentro do código.
 
 
