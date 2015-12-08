@@ -9,7 +9,7 @@ Baseado no paper: Oliveira, M.; Santos, V. Automatic Detection of Cars in Real R
 (disponivel em https://sites.google.com/site/andrewssobral/Automatic_Detection_of_Cars_in_Real_Roads_using_Haar-like_Features.pdf?attredirects=0 )
 
 --- Compilando com CMake ---
-cd unb-pvc-project-cars/groundtruth
+cd unb-pvc-project-cars/vehicle_detection_haarcascade
 mkdir build
 cd build
 sudo apt-get install cmake
@@ -21,10 +21,10 @@ generator_name: nome da interface onde voce deseja desenvolver, para gerar makef
 
 Dentro da pasta build digite:
 	make
-Para executar ./<nomeexecutavel> <path_to_cars3.xml>
+Para executar ./<nomeexecutavel> <path_to_cars3.xml> <path_to_video>
 
 --- Usando Shell para rodar todos os videos ---
-Leia as instruções dentro run_videos.sh
+Leia as instruções dentro do run_videos.sh
 
 
 
