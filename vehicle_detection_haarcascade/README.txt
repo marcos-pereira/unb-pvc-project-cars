@@ -21,7 +21,10 @@ generator_name: nome da interface onde voce deseja desenvolver, para gerar makef
 
 Dentro da pasta build digite:
 	make
-Para executar ./<nomeexecutavel>
+Para executar ./<nomeexecutavel> <path_to_cars3.xml>
+
+--- Usando Shell para rodar todos os videos ---
+Leia as instruções dentro run_videos.sh
 
 
 
