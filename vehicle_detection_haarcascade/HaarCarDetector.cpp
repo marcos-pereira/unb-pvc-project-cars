@@ -40,7 +40,7 @@ std::vector<std::vector<double>> HaarCarDetector::GetCarsRectangles(IplImage *im
   
   // IplImage ipl_img = img_mat;
 
-  cvSetImageROI(img, cvRect(img->width*1/2.6, img->height*1/3.5, img->width - img->width*1/2.6, img->height*2/3.1));
+  //cvSetImageROI(img, cvRect(img->width*1/2.6, img->height*1/3.5, img->width - img->width*1/2.6, img->height*2/3.1));
   IplImage *img2 = cvCreateImage(cvGetSize(img),
                            img->depth,
                            img->nChannels);
@@ -85,8 +85,10 @@ std::vector<std::vector<double>> HaarCarDetector::GetCarsRectangles(IplImage *im
     rectangles_properties.clear();
   }
 
+  cv::Mat cars_rectangles(img2);
+  // imwrite("output.jpg",cars_rectangles);
 
-  cvShowImage("ROI", img2);
+  cvShowImage("Carros", img2);
   cvWaitKey(0);
 
   return rectangles;
