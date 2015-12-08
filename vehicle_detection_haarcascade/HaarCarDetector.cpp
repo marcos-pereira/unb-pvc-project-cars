@@ -40,6 +40,7 @@ std::vector<std::vector<double>> HaarCarDetector::GetCarsRectangles(IplImage *im
   
   // IplImage ipl_img = img_mat;
 
+  // Uncomment to find cars just on desired ROI
   //cvSetImageROI(img, cvRect(img->width*1/2.6, img->height*1/3.5, img->width - img->width*1/2.6, img->height*2/3.1));
   IplImage *img2 = cvCreateImage(cvGetSize(img),
                            img->depth,
