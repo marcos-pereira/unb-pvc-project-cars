@@ -10,9 +10,9 @@ using namespace std;
 //--Parameters--------------//
 
 //-Optical-Flow------------//
-#define LAMBDA      0.01
-#define SMOOTH       9 
-#define THRESH_VEL  0.7
+#define LAMBDA      0.1
+#define SMOOTH       15 
+#define THRESH_VEL  0.5
 
 //-Draw-Contours-----------//
 #define MINAREA		250
