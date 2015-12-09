@@ -90,7 +90,7 @@ std::vector<std::vector<double>> HaarCarDetector::GetCarsRectangles(IplImage *im
   // imwrite("output.jpg",cars_rectangles);
 
   cvShowImage("Carros", img2);
-  cvWaitKey(0);
+  // cvWaitKey(0);
 
   return rectangles;
 }

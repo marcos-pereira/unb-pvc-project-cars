@@ -57,7 +57,7 @@ int main(int argc, char** argv)
 
   std::vector<std::vector<double>> rectangles;
 
-  int frame_number = 0;
+  int frame_number = 1;
 
   int key = 0;
   do
@@ -75,13 +75,31 @@ int main(int argc, char** argv)
     rectangles = haarcascade_detector.GetCarsRectangles(frame, frame_number);
 
     // write rectangles to file
+    int continue_flag = 0;
     for(int ii = 0; ii < rectangles.size(); ii++)
     {
-      for(int jj = 0; jj < rectangles[ii].size() ; jj++)
+      for(int jj = 0 ; jj < rectangles[ii].size() ; jj++)
       {
-        detected_cars_datafile << rectangles[ii][jj] << ";";
+        if(rectangles[ii][0] == 1)
+        {
+          // do not store frame 1
+          continue_flag = 1;
+          continue;
+        }
+        detected_cars_datafile << rectangles[ii][jj];
+        if(jj < rectangles[ii].size() - 1) 
+        {
+          detected_cars_datafile << ";";
+        }        
       }
-      detected_cars_datafile << std::endl;
+      if(continue_flag == 0)
+      {
+        detected_cars_datafile << std::endl;
+      }
+      else
+      {
+        continue_flag = 0;
+      }
     }
 
     frame_number++;
