@@ -11,19 +11,21 @@ using namespace std;
 
 //-Optical-Flow------------//
 #define LAMBDA      0.01
-#define SMOOTH      9
-#define THRESH_VEL  .7
+#define SMOOTH       9 
+#define THRESH_VEL  0.7
 
 //-Draw-Contours-----------//
 #define MINAREA		250
-#define MAXAREA		1700
+#define MAXAREA		2000
 
 //-Morphological-Ops-------//
-#define DILATESIZE 	3
+#define DILATESIZE 	1
 
 //--------------------------//
 
 IplImage* imgROI( IplImage* );
+
+string intToString(int number);
 
 string getFileName( string );
 

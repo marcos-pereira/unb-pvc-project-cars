@@ -60,7 +60,7 @@ IplImage* opticalFlowHS( IplImage* imgPrev, IplImage* imgCurr, float Lambda, int
         0,                                           //Flag -> use previous
         velx,                                        //Stores X velocity
         vely,                                        //Stores Y velocity
-        Lambda,                                         //Lambda(smoothness)                                         
+        Lambda,                                      //Lambda(smoothness)                                         
         cvTermCriteria(//Recursive stop criteria
             CV_TERMCRIT_ITER | CV_TERMCRIT_EPS,      //Type
             imgPrev->width,                          //Max count

@@ -22,9 +22,10 @@ Mat drawContour( const Mat Original, Mat threshImage )
         if( area > MINAREA )
         	if( area < MAXAREA )
         	{
-        		Scalar color = Scalar( rng.uniform(100, 200), rng.uniform(100,200), rng.uniform(100,200) );
+//        		Scalar color = Scalar( rng.uniform(100, 200), rng.uniform(100,200), rng.uniform(100,200) );
+                Scalar color = Scalar( 0, 255, 0 );
         		contourRect = boundingRect( contours[i] );
-        		rectangle( segmented, contourRect, color, 2 );
+        		rectangle( segmented, contourRect, color, 1 );
         	}
     }
 
@@ -75,7 +76,7 @@ Mat drawContour( string Filename, Mat Original, Mat threshImage, int frameCount 
     vector<vector<Point> > contours;
     vector<Vec4i> hierarchy;
 
-    findContours( threshImage, contours, hierarchy,CV_RETR_CCOMP, CV_CHAIN_APPROX_SIMPLE );
+    findContours( threshImage, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_SIMPLE );
 
     //  Search through contours
     for( i = 0; i < contours.size(); i++ )
@@ -84,17 +85,18 @@ Mat drawContour( string Filename, Mat Original, Mat threshImage, int frameCount 
         if( area > MINAREA )
         	if( area < MAXAREA )
         	{
-        		Scalar color = Scalar( rng.uniform(100, 200), rng.uniform(100,200), rng.uniform(100,200) );
+//        		Scalar color = Scalar( rng.uniform(100, 200), rng.uniform(100,200), rng.uniform(100,200) );
+                Scalar color = Scalar( 0, 255, 0 );
         		contourRect = boundingRect( contours[i] );
-        		rectangle( segmented, contourRect, color, 2 );
+        		rectangle( segmented, contourRect, color, 1 );
         		
         		dataFile << frameCount << ";" 
         				 << contourRect.x   << ";" 
         				 << contourRect.y   << ";" 
         				 << contourRect.width   << ";" 
         				 << contourRect.height  << ";"
-                         << (contourRect.x + contourRect.width)/2   << ";"
-                         << (contourRect.y + contourRect.height)/2  << ";"
+                         << contourRect.x + (contourRect.width)/2   << ";"
+                         << contourRect.y + (contourRect.height)/2
         				 << endl;
         	}
     }

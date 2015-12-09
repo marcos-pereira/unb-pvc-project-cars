@@ -6,6 +6,6 @@ Mat drawContour( const string, const Mat , Mat, const int );
 
 Mat flowDilate( const Mat );
 
-Mat flowSegmentation( const IplImage*, IplImage* );
+Mat flowSegmentation(  IplImage*, IplImage* );
 
 Mat flowSegmentation( string, IplImage*, IplImage*, int );

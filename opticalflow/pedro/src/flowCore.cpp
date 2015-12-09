@@ -15,6 +15,13 @@ IplImage* imgROI( IplImage* orig )
     return img2;
 }
 
+string intToString(int number)
+{
+    std::stringstream ss;
+    ss << number;
+    return ss.str();
+}
+
 string getFileName( string videoName )
 {
     string filename;
