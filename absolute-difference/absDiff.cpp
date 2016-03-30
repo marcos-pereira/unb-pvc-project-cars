@@ -13,31 +13,9 @@
 #include <vector>
 #include <string>
 
+
 using namespace std;
 using namespace cv;
-
-//string filename[21] = {
-//    "cctv052x2004080516x01638.avi",
-//    "cctv052x2004080516x01639.avi",
-//    "cctv052x2004080516x01640.avi",
-//    "cctv052x2004080516x01641.avi",
-//    "cctv052x2004080516x01642.avi",
-//    "cctv052x2004080516x01643.avi",
-//    "cctv052x2004080516x01644.avi",
-//    "cctv052x2004080516x01645.avi",
-//    "cctv052x2004080516x01646.avi",
-//    "cctv052x2004080516x01647.avi",
-//    "cctv052x2004080516x01648.avi",
-//    "cctv052x2004080516x01649.avi",
-//    "cctv052x2004080516x01650.avi",
-//    "cctv052x2004080517x01652.avi",
-//    "cctv052x2004080517x01653.avi",
-//    "cctv052x2004080517x01654.avi",
-//    "cctv052x2004080517x01655.avi",
-//    "cctv052x2004080517x01656.avi",
-//    "cctv052x2004080517x01657.avi",
-//    "cctv052x2004080517x01658.avi",
-//};
 
 string filename[18] = {
     "n1.avi",
@@ -59,6 +37,59 @@ string filename[18] = {
     "n17.avi",
 };
 
+
+Mat absoluteDifference (Mat newFrame, Mat firstFrame, int counterFrame, int totalFrames, FILE *fp) {
+    
+    Mat gray, frameDelta, thresh;
+    
+    resize(newFrame, newFrame, cvSize(500, 375));
+//    newFrame = newFrame(cv::Rect(newFrame.cols*1/2.6,newFrame.rows*1/3.5,newFrame.cols - newFrame.cols/2.6,newFrame.rows*2/3.1));
+    cvtColor(newFrame, gray, COLOR_BGR2GRAY);
+    GaussianBlur(gray, gray, cvSize(21, 21), 0);
+    
+    if (newFrame.empty()) {
+        newFrame = gray;
+    }
+    
+    absdiff(firstFrame, gray, frameDelta);
+    threshold(frameDelta, thresh, 40, 255, THRESH_BINARY);
+    dilate(thresh, thresh, 10);
+    
+    vector<vector<Point> > newc;
+    findContours(thresh, newc, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    
+    for (int i = 0; i < newc.size(); i++) {
+        double a = contourArea(newc[i]);
+        if (a < 100) {
+            continue;
+        }
+        if (a > 3000) {
+            continue;
+        }
+        Rect r = boundingRect(newc[i]);
+        Point pt1 = cvPoint(r.x, r.y);
+        Point pt2 = cvPoint(r.x + r.width, r.y + r.height);
+        rectangle(newFrame, pt1, pt2, Scalar(0,255,0),2);
+
+        if (counterFrame == 1) {
+            
+        } else if (counterFrame == totalFrames) {
+            
+        } else {
+            int centerX = (int)(r.x + r.width)/2;
+            int centerY = (int)(r.y + r.height)/2;
+            fprintf(fp, "%d;%d;%d;%d;%d;%d;%d\n",counterFrame,r.x,r.y,r.width,r.height,centerX,centerY);
+        }
+        
+        imshow("Thresh", thresh);
+        moveWindow("Thresh", 500, 50);
+        imshow("Frame Delta", frameDelta);
+        moveWindow("Frame Delta", 250, 425);
+    }
+    
+    return newFrame;
+}
+
 int main(int argc, char **args) {
     
     FILE *fp;
@@ -66,15 +97,18 @@ int main(int argc, char **args) {
     string txtFileName;
     const char *constCharFileName;
     
-    Mat firstFrame, newFrame, gray, frameDelta, thresh;
+    Mat firstFrame, newFrame, gray, frameDelta, thresh, result;
     
     int counterFrame, totalFrames = 0;
     
     firstFrame = imread("firstFrame2.png",1);
     resize(firstFrame, firstFrame, cvSize(500, 375));
-    firstFrame = firstFrame(cv::Rect(firstFrame.cols*1/2.6,firstFrame.rows*1/3.5,firstFrame.cols - firstFrame.cols/2.6,firstFrame.rows*2/3.1));
+//    firstFrame = firstFrame(cv::Rect(firstFrame.cols*1/2.6,firstFrame.rows*1/3.5,firstFrame.cols - firstFrame.cols/2.6,firstFrame.rows*2/3.1));
+    imshow("First Frame", firstFrame);
     cvtColor(firstFrame, firstFrame, COLOR_BGR2GRAY);
     GaussianBlur(firstFrame, firstFrame, cvSize(21, 21), 0);
+    
+    
     
     for (int i = 0; i < 17; i++) {
     
@@ -99,63 +133,26 @@ int main(int argc, char **args) {
             
             counterFrame++;
             
-            resize(newFrame, newFrame, cvSize(500, 375));
-            newFrame = newFrame(cv::Rect(newFrame.cols*1/2.6,newFrame.rows*1/3.5,newFrame.cols - newFrame.cols/2.6,newFrame.rows*2/3.1));
-            cvtColor(newFrame, gray, COLOR_BGR2GRAY);
-            GaussianBlur(gray, gray, cvSize(21, 21), 0);
+            result = absoluteDifference(newFrame,firstFrame, counterFrame, totalFrames, fp);
             
-            if (newFrame.empty()) {
-                newFrame = gray;
-            }
-            
-            absdiff(firstFrame, gray, frameDelta);
-            threshold(frameDelta, thresh, 50, 255, THRESH_BINARY);
-            dilate(thresh, thresh, 10);
-            
-            vector<vector<Point> > newc;
-            findContours(thresh, newc, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
-
-            for (int i = 0; i < newc.size(); i++) {
-                double a = contourArea(newc[i]);
-                if (a < 100) {
-                    continue;
-                }
-                if (a > 3000) {
-                    continue;
-                }
-                Rect r = boundingRect(newc[i]);
-                Point pt1 = cvPoint(r.x, r.y);
-                Point pt2 = cvPoint(r.x + r.width, r.y + r.height);
-                rectangle(newFrame, pt1, pt2, Scalar(0,255,0),2);
-                
-                if (counterFrame == 1) {
-                   
-                } else if (counterFrame == totalFrames) {
-                
-                } else {
-                    int centerX = (int)(r.x + r.width)/2;
-                    int centerY = (int)(r.y + r.height)/2;
-                    fprintf(fp, "%d;%d;%d;%d;%d;%d;%d\n",counterFrame,r.x,r.y,r.width,r.height,centerX,centerY);
-                }
-            }
-            
-            
-            
-            imshow("Feed", newFrame);
-            moveWindow("Feed", 0, 50);
-            imshow("Thresh", thresh);
-            moveWindow("Thresh", 500, 50);
-            imshow("Frame Delta", frameDelta);
-            moveWindow("Frame Delta", 250, 425);
+            imshow("Result", result);
+            moveWindow("Result", 0, 50);
             
             waitKey(1);
-            
+            char c;
+            do
+            {
+                c = waitKey(0);
+                
+                
+                
+            }while( c != 32);
         }
         
         fclose(fp);
     }
+    
     destroyAllWindows();
-//    waitKey(0);
     
     return 0;
     
