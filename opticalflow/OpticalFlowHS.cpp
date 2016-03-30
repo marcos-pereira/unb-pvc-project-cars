@@ -12,7 +12,7 @@ void help()
         "it`s basic usage is\n"
         "\t     ./OpticalFlowHS <path/to/video/file>\n"
         "The parameters of the Optical flow can influence your results.\n"
-        "To alter them, just open the src/segmentation.cpp file and change the values on #define:\n"
+        "To alter them, just open the src/flowCore.hpp file and change the values on #define:\n"
         "\t"     "LAMBDA    - wheighting factor of cvCalcOpticalFlowHS();\n"
         "\t"     "SMOOTH    - Kernel size and std deviation of Gaussian`s smooth operation;\n"
         "\t"     "THESH_VEL - Threshold value for velocities\n"
@@ -76,7 +76,7 @@ int main(int argc, char** argv)
             
         Results = opticalFlowHS( curr_gray, next_gray, LAMBDA, SMOOTH, THRESH_VEL );
 
-        Mat segmented = flowSegmentation( filename ,current, Results, frameCount );
+        Mat segmented = flowSegmentation( filename, current, Results, frameCount );
 
         //  Show tracking  
         cvShowImage( "Raw Image", current );  
@@ -85,7 +85,7 @@ int main(int argc, char** argv)
         imshow( "Segmented Image", segmented );  
       
         //  Atualize
-        current = cvCloneImage( next );
+        //current = cvCloneImage( next );
         curr_gray = cvCloneImage( next_gray );
 
         char c = cvWaitKey( 0 );  
