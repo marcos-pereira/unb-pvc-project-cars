@@ -108,7 +108,7 @@ int main(int argc, char **args) {
     cvtColor(firstFrame, firstFrame, COLOR_BGR2GRAY);
     GaussianBlur(firstFrame, firstFrame, cvSize(21, 21), 0);
     
-    string pathToVideos = "../../videos_renomeados/";
+    string pathToVideos = "../../videos/videos_trabalho_final/";
     
     for (int i = 0; i < 17; i++) {                
 
