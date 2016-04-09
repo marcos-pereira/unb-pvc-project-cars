@@ -101,19 +101,22 @@ int main(int argc, char **args) {
     
     int counterFrame, totalFrames = 0;
     
-    firstFrame = imread("firstFrame2.png",1);
+    firstFrame = imread("firstframe.png",1);
     resize(firstFrame, firstFrame, cvSize(500, 375));
 //    firstFrame = firstFrame(cv::Rect(firstFrame.cols*1/2.6,firstFrame.rows*1/3.5,firstFrame.cols - firstFrame.cols/2.6,firstFrame.rows*2/3.1));
     imshow("First Frame", firstFrame);
     cvtColor(firstFrame, firstFrame, COLOR_BGR2GRAY);
     GaussianBlur(firstFrame, firstFrame, cvSize(21, 21), 0);
     
+    string pathToVideos = "../../videos_renomeados/";
     
-    
-    for (int i = 0; i < 17; i++) {
-    
+    for (int i = 0; i < 17; i++) {                
+
+        filename[i] = pathToVideos + filename[i];
+        cout << "filename[i] "  << filename[i] << std::endl;
+
         VideoCapture cap(filename[i]);
-        
+
         txtFileName = filename[i].append(".txt");
         
         constCharFileName = txtFileName.c_str();
