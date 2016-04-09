@@ -20,8 +20,8 @@ void help()
     << endl;
 }
 
-int main(int argc, char** argv)  
-{   
+int main(int argc, char** argv)
+{
     bool running = true;
     int frameCount = 0;
 
@@ -35,14 +35,14 @@ int main(int argc, char** argv)
     createNewFile( filename );
 
     //  Img
-    IplImage *current = 0, *next = 0, *Results = 0;   
-    current =  cvQueryFrame( capture ); 
+    IplImage *current = 0, *next = 0, *Results = 0;
+    current =  cvQueryFrame( capture );
     //  skip first frame
     current = cvQueryFrame( capture );
     frameCount++;
 
     if(!(current))
-    { 
+    {
         help();
         cout << "\nCouldn`t start video capture" << endl;
         return -1;
@@ -55,13 +55,13 @@ int main(int argc, char** argv)
     //  Gray-Img
     IplImage *curr_gray = cvCreateImage(cvGetSize(current),IPL_DEPTH_8U,1);
     IplImage *next_gray = cvCreateImage(cvGetSize(current),IPL_DEPTH_8U,1);
-    cvCvtColor(current, curr_gray, CV_RGB2GRAY); 
-      
+    cvCvtColor(current, curr_gray, CV_RGB2GRAY);
+
     createWindows();
 
     while( running )
     {
-        next =  cvQueryFrame( capture ); 
+        next =  cvQueryFrame( capture );
 
         if(!(next))
         {
@@ -73,48 +73,48 @@ int main(int argc, char** argv)
         next = imgROI( next );
 
         cvCvtColor( next, next_gray, CV_RGB2GRAY );
-            
+
         Results = opticalFlowHS( curr_gray, next_gray, LAMBDA, SMOOTH, THRESH_VEL );
 
         Mat segmented = flowSegmentation( filename, current, Results, frameCount );
 
-        //  Show tracking  
-        cvShowImage( "Raw Image", current );  
+        //  Show tracking
+        cvShowImage( "Raw Image", current );
         cvSet( current, cvScalar(255, 255, 255), Results );
         cvShowImage( "Raw Flow", current );
-        imshow( "Segmented Image", segmented );  
-      
+        imshow( "Segmented Image", segmented );
+
         //  Atualize
-        //current = cvCloneImage( next );
+        current = cvCloneImage( next );
         curr_gray = cvCloneImage( next_gray );
 
-        char c = cvWaitKey( 0 );  
+        char c = cvWaitKey( 0 );
 
         if( c == 27 )
             running = false;
     }
     cvReleaseCapture( &capture );
-    // destroy windows  
+    // destroy windows
     destroyWindows();
-    // release memory  
-    cvReleaseImage( &curr_gray ); 
-    cvReleaseImage( &next_gray );  
-    cvReleaseImage( &Results );  
-  
-    return 0;  
-}  
+    // release memory
+    cvReleaseImage( &curr_gray );
+    cvReleaseImage( &next_gray );
+    cvReleaseImage( &Results );
+
+    return 0;
+}
 
 
 void createWindows()
 {
-    cvNamedWindow( "Raw Image" );  
-    cvNamedWindow( "Raw Flow"  );  
+    cvNamedWindow( "Raw Image" );
+    cvNamedWindow( "Raw Flow"  );
     namedWindow  ( "Dilation"  );
 }
 
 void destroyWindows()
 {
-    cvDestroyWindow( "Raw Image"  );  
-    cvDestroyWindow( "Raw Flow"   );  
+    cvDestroyWindow( "Raw Image"  );
+    cvDestroyWindow( "Raw Flow"   );
     cvDestroyWindow( "Dilatation" );
 }
