@@ -31,13 +31,16 @@ include_directories (${CMAKE_BINARY_DIR}
 
 set (SRCS ${SRCS} 
 	generate_negative_samples.cpp
+	draw_rectangles.cpp
 	)
 
 add_library(GroundtruthLibs ${SRCS})
 
 add_executable (generate_negative_samples generate_negative_samples.cpp)
+add_executable (draw_rectangles draw_rectangles.cpp)
 
 target_link_libraries (generate_negative_samples GroundtruthLibs ${OpenCV_LIBS})
+target_link_libraries (draw_rectangles GroundtruthLibs ${OpenCV_LIBS})
 
 # add the install targets
 install (TARGETS generate_negative_samples DESTINATION bin)

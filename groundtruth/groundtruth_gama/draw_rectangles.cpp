@@ -116,6 +116,8 @@ int main(int argc, char* argv[]) {
 			
 			negative_samples_filename = video_file_name + "_" + "negative_sample" + frame_counter_ss.str() + "_" + ".png";
 
+			frame_counter_ss.str(std::string());
+
 			//Exibicao do frame desenhado
 			imshow("Video Capture", frame);
 			imwrite(negative_samples_filename, roi_frame);		
