@@ -127,7 +127,7 @@ int main(int argc, char* argv[]) {
 			imshow("ROI frame drawing image",frame);				
 			char c;
 			do {
-				imwrite(negative_samples_filename_g, frame);
+				//imwrite(negative_samples_filename_g, frame);  // there is no need to save the images with cars showing up
 				negative_samples_file.clear();
 				frame_counter_ss.str(std::string());
 				c = waitKey(0);								
