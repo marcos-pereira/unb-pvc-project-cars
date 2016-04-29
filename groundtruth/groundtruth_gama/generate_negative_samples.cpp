@@ -98,7 +98,7 @@ int main(int argc, char* argv[]) {
 
 			frame_counter_ss << counterFrame;			
 
-			negative_samples_file = "negative_sample" + frame_counter_ss.str() + "_" + video_file_name + ".png";
+			negative_samples_file = video_file_name + "_" + "negative_sample" + frame_counter_ss.str() + "_" + ".png";
 
 			negative_samples_filename_g = negative_samples_file;
 
