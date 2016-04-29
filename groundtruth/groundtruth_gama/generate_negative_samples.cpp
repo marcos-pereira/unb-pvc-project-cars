@@ -27,6 +27,8 @@ bool selectObject = false;
 Point origin;
 Rect selection;
 Mat frame;
+Mat roi_frame;
+Mat original_frame;
 Mat ROI;
 int counterFrame = 0;
 int totalFrames = 0;
@@ -79,10 +81,14 @@ int main(int argc, char* argv[]) {
 	std::ostringstream frame_counter_ss;	
 	string frame_number;
 
-	namedWindow("Video Capture",WINDOW_NORMAL);
-	resizeWindow("Video Capture", 850, 900);
+
+	// Create and set window size to make drawing easier
+	namedWindow("ROI frame drawing image",WINDOW_NORMAL);
+	resizeWindow("ROI frame drawing image", 850, 900);
+	// namedWindow("ROI frame",WINDOW_NORMAL);
+	// resizeWindow("ROI frame", 850, 900);
 	
-	setMouseCallback("Video Capture", onMouse, 0);
+	setMouseCallback("ROI frame drawing image", onMouse, 0);
 
 	//Estrutura de laco de repeticao para executar ate o penultimo frame, visto que a maioria dos ultimos frames
 	//estao danificados
@@ -96,9 +102,29 @@ int main(int argc, char* argv[]) {
 
 			negative_samples_filename_g = negative_samples_file;
 
-			rectangle(frame, Rect(frame.cols*1/2.6,frame.rows*1/3.5,frame.cols - frame.cols/2.6,frame.rows*2/3.1),Scalar(0,0,255),1,8,0);
+			Mat original_frame_to_draw_black_rectangles = frame.clone();
 
-			imshow("Video Capture",frame);				
+			// Draw rectangle of ROI
+			rectangle(frame, Rect(frame.cols*1/2.6,frame.rows*1/3.5,frame.cols - frame.cols/2.6,frame.rows*2/3.1),Scalar(0,0,255),1,8,0);
+			
+			// Set rectangle that defines ROI of image
+			cv::Rect rectangle_roi( frame.cols*1/2.6,frame.rows*1/3.5,frame.cols - frame.cols/2.6,frame.rows*2/3.1);
+			
+			// Store original frame with a red rectangle around ROI
+			original_frame = frame.clone();		
+
+			// Show original image with ROI rectangle
+			imshow("Original frame",original_frame);
+
+			// Get original image without red rectangle to use for drawing black rectangle and generate negative samples
+			roi_frame = original_frame_to_draw_black_rectangles.clone();			
+
+			// Get image ROI
+			roi_frame = roi_frame( rectangle_roi );
+			// imshow("ROI frame",roi_frame);
+			
+			frame = roi_frame.clone();			
+			imshow("ROI frame drawing image",frame);				
 			char c;
 			do {
 				imwrite(negative_samples_filename_g, frame);
@@ -135,9 +161,11 @@ void onMouse(int event, int x, int y, int, void *){
         selectObject = true;
         break;
     case CV_EVENT_LBUTTONUP:
+    	// Draw black rectangle over car
     	rectangle(frame,selection,Scalar(0,0,0),CV_FILLED,8,0);    	
+    	rectangle(roi_frame,selection,Scalar(0,0,0),CV_FILLED,8,0);    	
     	writeFile();
-    	imshow("Video Capture", frame);
+    	imshow("ROI frame drawing image", frame);    	
     	imwrite(negative_samples_filename_g, frame);		
         selectObject = false;
         cout << selection << endl;
